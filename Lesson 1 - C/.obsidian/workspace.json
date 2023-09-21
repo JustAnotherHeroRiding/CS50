@@ -148,6 +148,10 @@
   },
   "active": "07d2f2f9487abde5",
   "lastOpenFiles": [
+    "calculator",
+    "calculator.c",
+    "meow",
+    "meow.c",
     "agree",
     "agree.c",
     "compare",
@@ -155,10 +159,6 @@
     "donut.c",
     "compare.c",
     "libcs50-11.0.2/stJmNDko",
-    "libcs50-11.0.2/stECN0n9",
-    "libcs50-11.0.2/stsbtdAw",
-    "libcs50-11.0.2/libcs50.a",
-    "libcs50-11.0.2/libcs50.o",
     "libcs50-11.0.2/README.md"
   ]
 }
