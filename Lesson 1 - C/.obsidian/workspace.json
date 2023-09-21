@@ -148,6 +148,8 @@
   },
   "active": "07d2f2f9487abde5",
   "lastOpenFiles": [
+    "woof",
+    "woof.c",
     "calculator",
     "calculator.c",
     "meow",
@@ -157,8 +159,6 @@
     "compare",
     "donut",
     "donut.c",
-    "compare.c",
-    "libcs50-11.0.2/stJmNDko",
     "libcs50-11.0.2/README.md"
   ]
 }
