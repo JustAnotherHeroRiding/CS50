@@ -148,6 +148,8 @@
   },
   "active": "07d2f2f9487abde5",
   "lastOpenFiles": [
+    "mario",
+    "mario.c",
     "woof",
     "woof.c",
     "calculator",
@@ -157,8 +159,6 @@
     "agree",
     "agree.c",
     "compare",
-    "donut",
-    "donut.c",
     "libcs50-11.0.2/README.md"
   ]
 }
