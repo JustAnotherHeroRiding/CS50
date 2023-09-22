@@ -148,6 +148,9 @@
   },
   "active": "07d2f2f9487abde5",
   "lastOpenFiles": [
+    "practice/debug",
+    "practice/debug.c",
+    "debug.c",
     "mario",
     "mario.c",
     "woof",
@@ -156,9 +159,6 @@
     "calculator.c",
     "meow",
     "meow.c",
-    "agree",
-    "agree.c",
-    "compare",
     "libcs50-11.0.2/README.md"
   ]
 }
