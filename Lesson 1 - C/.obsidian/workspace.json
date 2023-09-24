@@ -148,6 +148,10 @@
   },
   "active": "07d2f2f9487abde5",
   "lastOpenFiles": [
+    "pset1/credit",
+    "pset1/credit.c",
+    "pset1/credit/credit.c",
+    "pset1/credit.zip",
     "pset1/mario",
     "pset1/mario.c",
     "pset1/mario-more/mario-more/mario.c",
@@ -155,10 +159,6 @@
     "pset1/mario-more",
     "pset1/mario-more.zip",
     "pset1/hello",
-    "pset1/hello.c",
-    "pset1",
-    "practice/pset1",
-    "Lab 1/population2",
     "libcs50-11.0.2/README.md"
   ]
 }
