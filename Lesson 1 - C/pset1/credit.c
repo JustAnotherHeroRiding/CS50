@@ -23,33 +23,40 @@ int main(void)
 
     return 0;
 }
-bool luhn_check(size_t length, char *numberStr)
+bool luhn_check(size_t length, char *numberStr, long number)
 {
-    int result;
-    for (int i = length - 2; i > 0; i -= 2)
+    int result = 0;
+    for (int i = length - 2; i >= 0; i -= 2)
     {
         int digit = numberStr[i] - '0';
         int notMultiplied = numberStr[i + 1] - '0';
 
-        printf("%i ", digit);
-        printf("%i\n", notMultiplied);
+        /*  printf("%i ", digit);
+
+         printf("%i\n", notMultiplied); */
+
         int product = digit * 2;
 
-        result += product;
+        if (product >= 10)
+        {
+            int tensDigit = (product / 10); // Get the tens digit
+            int onesDigit = (product % 10); // Get the ones digit
+
+            result += tensDigit + onesDigit;
+        }
+        else
+        {
+            result += product;
+        }
+
         result += notMultiplied;
-        printf("%i\n", result);
+
+        // printf("%i\n", result);
     }
-    result += numberStr[0] - '0';
+    //  result += numberStr[0] - '0';
     printf("%i\n", result);
 
-    char resultStr[20];
-    size_t resultLength;
-
-    snprintf(resultStr, sizeof(resultStr), "%i", result);
-
-    resultLength = strlen(resultStr);
-
-    if (resultStr[resultLength -1] == 0)
+    if (result % 10 == 0)
     {
         return true;
     }
@@ -65,7 +72,7 @@ string check_card(long number, size_t length, char *numberStr)
      */
 
     // I need to implement a function that checks if the number is valid using Luhn’s Algorithm
-    if ((length < 13 || length > 16) || luhn_check(length, numberStr) == false)
+    if ((length < 13 || length > 16) || luhn_check(length, numberStr, number) == false)
     {
         printf("INVALID\n");
     }
