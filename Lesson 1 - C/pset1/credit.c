@@ -26,35 +26,32 @@ int main(void)
 bool luhn_check(size_t length, char *numberStr, long number)
 {
     int result = 0;
-    for (int i = length - 2; i >= 0; i -= 2)
+    bool alternate = false; // To determine whether to multiply by 2
+
+    for (int i = length - 1; i >= 0; i--)
     {
         int digit = numberStr[i] - '0';
-        int notMultiplied = numberStr[i + 1] - '0';
 
-        /*  printf("%i ", digit);
-
-         printf("%i\n", notMultiplied); */
-
-        int product = digit * 2;
-
-        if (product >= 10)
+        if (alternate)
         {
-            int tensDigit = (product / 10); // Get the tens digit
-            int onesDigit = (product % 10); // Get the ones digit
-
-            result += tensDigit + onesDigit;
+            int product = digit * 2;
+            if (product >= 10)
+            {
+                // If the product is two digits, add its individual digits
+                result += (product % 10) + (product / 10);
+            }
+            else
+            {
+                result += product;
+            }
         }
         else
         {
-            result += product;
+            result += digit;
         }
 
-        result += notMultiplied;
-
-        // printf("%i\n", result);
+        alternate = !alternate; // Toggle the alternate flag
     }
-    //  result += numberStr[0] - '0';
-    printf("%i\n", result);
 
     if (result % 10 == 0)
     {
@@ -65,6 +62,7 @@ bool luhn_check(size_t length, char *numberStr, long number)
         return false;
     }
 }
+
 string check_card(long number, size_t length, char *numberStr)
 {
     // printf("Length: %i\n", length);
