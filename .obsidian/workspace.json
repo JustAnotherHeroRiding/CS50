@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "d84f052263262b74",
+            "id": "2976fab48f1a200c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lesson 1 - C/Lesson 1 C Notes.md",
+                "file": "Lesson 2 - Arrays/Lesson 2 - Arrays Notes.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Lesson 1 - C/Lesson 1 C Notes.md",
+                "file": "Lesson 2 - Arrays/Lesson 2 - Arrays Notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Lesson 1 - C/Lesson 1 C Notes.md",
+                "file": "Lesson 2 - Arrays/Lesson 2 - Arrays Notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Lesson 1 - C/Lesson 1 C Notes.md"
+                "file": "Lesson 2 - Arrays/Lesson 2 - Arrays Notes.md"
               }
             }
           }
@@ -146,6 +146,27 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d84f052263262b74",
-  "lastOpenFiles": []
+  "active": "2976fab48f1a200c",
+  "lastOpenFiles": [
+    "Lesson 2 - Arrays/buggy",
+    "Lesson 2 - Arrays/buggy.c",
+    "Quake/readme.txt",
+    "Quake/qw-qc/world.qc",
+    "Quake/qw-qc/weapons.qc",
+    "Quake/qw-qc/triggers.qc",
+    "Quake/qw-qc/subs.qc",
+    "Quake/qw-qc/sprites.qc",
+    "Quake/qw-qc/spectate.qc",
+    "Quake/qw-qc/server.qc",
+    "Quake/qw-qc/qwprogs.dat",
+    "Quake/WinQuake/quake.gif",
+    "Quake/QW/quakeworld.bmp",
+    "Quake/QW/quake.gif",
+    "Quake/QW/client/quakeworld.bmp",
+    "Lesson 2 - Arrays/libcs50-11.0.2/README.md",
+    "Lesson 1 - C/libcs50-11.0.2/README.md",
+    "libcs50-11.0.2/README.md",
+    "Lesson 1 - C/Lesson 1 C Notes.md",
+    "Lesson 2 - Arrays/Lesson 2 - Arrays Notes.md"
+  ]
 }
