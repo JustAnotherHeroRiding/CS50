@@ -1,14 +1,15 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
-        {   
-            "name": "Buggy",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "${workspaceRoot}/buggy.exe"
-        }
-    ]
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build buggy",
+      "type": "shell",
+      "command": "gcc",
+      "args": ["-g", "buggy.c", "lcs50", "-o", "buggy"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
 }

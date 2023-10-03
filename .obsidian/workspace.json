@@ -148,6 +148,8 @@
   },
   "active": "2976fab48f1a200c",
   "lastOpenFiles": [
+    "Lesson 2 - Arrays/launch.json",
+    "Lesson 2 - Arrays/tasks.json",
     "Lesson 2 - Arrays/buggy",
     "Lesson 2 - Arrays/buggy.c",
     "Quake/readme.txt",
@@ -157,8 +159,6 @@
     "Quake/qw-qc/subs.qc",
     "Quake/qw-qc/sprites.qc",
     "Quake/qw-qc/spectate.qc",
-    "Quake/qw-qc/server.qc",
-    "Quake/qw-qc/qwprogs.dat",
     "Quake/WinQuake/quake.gif",
     "Quake/QW/quakeworld.bmp",
     "Quake/QW/quake.gif",
