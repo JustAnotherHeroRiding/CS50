@@ -23,7 +23,7 @@
 
 # Exercises
 
-- [Practice Problems](https://cs50.harvard.edu/x/2023/problems/2/)
+- [Practice Problems](https://cs50.harvard.edu/x/2023/problems/2/) #DONE 
 - [Lab 2](https://cs50.harvard.edu/x/2023/labs/2/)
 - [Problem Set 2](https://cs50.harvard.edu/x/2023/psets/2/)
 
@@ -42,3 +42,9 @@
 ### N0 V0w3ls
 
 - Create a program that will replace all vowels with a letter that looks similar to the word
+- We just loop over the word and check if each char is one of the vowels and the replace them with the number
+
+### Password
+- We need to check that a password contains all 4 required character types
+- We need a lowercase and uppercase letter, a number and a symbol
+- Using the ctype.h library, we can check if a char is uppercase, lowercase or a digit, and if not then it is a symbol
