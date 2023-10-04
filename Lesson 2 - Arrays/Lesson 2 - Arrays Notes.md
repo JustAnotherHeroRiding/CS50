@@ -26,3 +26,19 @@
 - [Practice Problems](https://cs50.harvard.edu/x/2023/problems/2/)
 - [Lab 2](https://cs50.harvard.edu/x/2023/labs/2/)
 - [Problem Set 2](https://cs50.harvard.edu/x/2023/psets/2/)
+
+
+### Hours.c
+- Depending on whether T(total) or A(average) is passed when asking for a char, we need to calculate the total or average hours
+- First we ask for the number of weeks
+- Then we create an array with as many slots as there are weeks
+- With the for loop we populate each element in the array with the number of hours spent on doing the homework
+- We ask for the character that will decide the output
+- This character must be T or A, type does not matter as it will be uppercased
+- Then we print the returned value of the function
+- The function initializes a new variable called total, where if we want to see the total we simply add all the hours in the array
+- If we want to see the average then we will divide the total by the number of weeks and return the result as a float
+- Since we already have a do while loop, there is no scenario where a character other than A or T is passed
+### N0 V0w3ls
+
+- Create a program that will replace all vowels with a letter that looks similar to the word
