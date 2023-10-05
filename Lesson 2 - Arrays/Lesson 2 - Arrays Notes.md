@@ -24,8 +24,8 @@
 # Exercises
 
 - [Practice Problems](https://cs50.harvard.edu/x/2023/problems/2/) #DONE 
-- [Lab 2](https://cs50.harvard.edu/x/2023/labs/2/)
-- [Problem Set 2](https://cs50.harvard.edu/x/2023/psets/2/)
+- [Lab 2](https://cs50.harvard.edu/x/2023/labs/2/) #DONE 
+- [Problem Set 2](https://cs50.harvard.edu/x/2023/psets/2/)``
 
 
 ### Hours.c
