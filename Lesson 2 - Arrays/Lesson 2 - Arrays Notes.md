@@ -52,3 +52,8 @@
 ### Scrabble
 - Using the array provided, score each word depending on the letters used in the word
 - Afterwards print the word
+
+
+
+### Readability
+- The instructions for this exercise are very explanatory
