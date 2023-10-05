@@ -56,18 +56,24 @@ string encode(string plaintext, int key, char *lowercase, char *uppercase)
 
     for (int i = 0; i < length; i++)
     {
-        int index = (i + key) % 26;
+        printf("%c", cipher[i]);
+        int index = ((int)plaintext[i] + key) % 25;
+        printf("Index %i %c", index, plaintext[i + index]);
         if (isalpha(plaintext[i]))
         {
-
+            //printf("%i", ((int)plaintext[i] + index));
             if (islower(plaintext[i]))
             {
 
-                cipher[i] = lowercase[index];
+                // cipher[i] = lowercase[(int)plaintext[i] + index];
+                //printf("%i", ((int)cipher[i] + index));
             }
             else
             {
-                cipher[i] = uppercase[index];            }
+                // cipher[i] = uppercase[(int)plaintext[i] + index];
+                //printf("%i", ((int)cipher[i] + index));
+            }
+            printf("\n");
         }
     }
 
