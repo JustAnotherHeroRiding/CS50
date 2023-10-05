@@ -48,3 +48,7 @@
 - We need to check that a password contains all 4 required character types
 - We need a lowercase and uppercase letter, a number and a symbol
 - Using the ctype.h library, we can check if a char is uppercase, lowercase or a digit, and if not then it is a symbol
+
+### Scrabble
+- Using the array provided, score each word depending on the letters used in the word
+- Afterwards print the word
