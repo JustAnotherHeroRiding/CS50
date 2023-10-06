@@ -77,11 +77,6 @@ int main(int argc, string argv[])
     printf(GREEN "This is WORDLE50" RESET "\n");
     printf("You have %i tries to guess the %i-letter word I'm thinking of\n", guesses, wordsize);
 
-    for (int i = 0; i < wordsize; i++)
-    {
-        printf("%c", choice[i]);
-    }
-    printf("\n");
     // main game loop, one iteration for each guess
     for (int i = 0; i < guesses; i++)
     {
@@ -122,6 +117,20 @@ int main(int argc, string argv[])
 
     // Print the game's result
     // TODO #7
+    if (won)
+    {
+        printf("You won!\n");
+    }
+    else
+    {
+        printf("Better luck next time!\n");
+    }
+    printf("The word was: ");
+    for (int i = 0; i < wordsize; i++)
+    {
+        printf("%c", choice[i]);
+    }
+    printf("\n");
 
     // that's all folks!
     return 0;
