@@ -5,8 +5,9 @@
 
 bool isAlphabet(string s);
 bool checkDuplicate(string alphabet);
+char encode(string alphabet, char plaintext);
 
-    int main(int argc, string argv[])
+int main(int argc, string argv[])
 {
     if (argc != 2 || !isAlphabet(argv[1]))
     {
@@ -17,7 +18,9 @@ bool checkDuplicate(string alphabet);
     {
         printf("Key must contain 26 characters.\n");
         return 1;
-    } else if (!checkDuplicate(argv[1])) {
+    }
+    else if (!checkDuplicate(argv[1]))
+    {
         printf("Key must not contain repeated characters.\n");
         return 1;
     }
@@ -25,8 +28,31 @@ bool checkDuplicate(string alphabet);
 
     string plaintext = get_string("plaintext: ");
     printf("ciphertext: ");
+    for (int i = 0; i < strlen(plaintext); i++)
+    {
+        printf("%c", encode(alphabet, plaintext[i]));
+    }
+    printf("\n");
 }
-
+char encode(string alphabet, char plaintext)
+{
+    int index;
+    if (isalpha(plaintext))
+    {
+        if (isupper(plaintext))
+        {
+            index = plaintext - 'A';
+            return toupper(alphabet[index]);
+        }
+        else if (islower(plaintext))
+        {
+            index = plaintext - 'a';
+            return tolower(alphabet[index]);
+        }
+    } else {
+        return plaintext;
+    }
+}
 bool checkDuplicate(string alphabet)
 {
     for (int i = 0; i < 26; i++)
