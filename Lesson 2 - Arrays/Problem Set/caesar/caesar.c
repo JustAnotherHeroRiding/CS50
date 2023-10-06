@@ -22,7 +22,7 @@ int main(int argc, string argv[])
     // Your program logic here
     // printf("%i\n", key);
 
-    char lowercase[27];
+   /*  char lowercase[27];
     char uppercase[27];
     int x;
 
@@ -33,9 +33,10 @@ int main(int argc, string argv[])
     }
 
     lowercase[x] = '\0'; // null terminate the array
-    uppercase[x] = '\0';
+    uppercase[x] = '\0'; */
 
     string plaintext = get_string("plaintext: ");
+    printf("ciphertext: ");
     for (int i = 0; i < strlen(plaintext); i++)
     {
         printf("%c", rotate(plaintext[i], key));
@@ -52,12 +53,19 @@ char rotate(char c, int key)
     {
         if (islower(c))
         {
+            if (c + key > 'z') {
+                c = c - 26;
+            }
             c = c + key;
             //printf("Lowercase");
         }
         else if (isupper(c))
         {
+            if (c + key > 'Z') {
+                c = c - 26;
+            }
             c = c + key;
+
             //printf("Uppercase");
         }
     }
