@@ -77,6 +77,11 @@ int main(int argc, string argv[])
     printf(GREEN "This is WORDLE50" RESET "\n");
     printf("You have %i tries to guess the %i-letter word I'm thinking of\n", guesses, wordsize);
 
+    for (int i = 0; i < wordsize; i++)
+    {
+        printf("%c", choice[i]);
+    }
+    printf("\n");
     // main game loop, one iteration for each guess
     for (int i = 0; i < guesses; i++)
     {
@@ -93,12 +98,6 @@ int main(int argc, string argv[])
         {
             status[i] = WRONG;
         }
-
-        for (int i = 0; i < wordsize; i++)
-        {
-            printf("%c", choice[i]);
-        }
-        printf("\n");
 
         // Calculate score for the guess
         int score = check_word(guess, wordsize, status, choice);
@@ -174,11 +173,6 @@ int check_word(string guess, int wordsize, int status[], string choice)
                     status[i] = CLOSE;
                     score += CLOSE;
                 }
-                else
-                {
-                    status[i] = WRONG;
-                    score += WRONG;
-                }
             }
         }
     }
@@ -189,6 +183,22 @@ void print_word(string guess, int wordsize, int status[])
 {
     // print word character-for-character with correct color coding, then reset terminal font to normal
     // TODO #6
+
+    for (int i = 0; i < wordsize; i++)
+    {
+        if (status[i] == EXACT)
+        {
+            printf(GREEN "%c" RESET, guess[i]);
+        }
+        else if (status[i] == CLOSE)
+        {
+            printf(YELLOW "%c" RESET, guess[i]);
+        }
+        else
+        {
+            printf(RED "%c" RESET, guess[i]);
+        }
+    }
 
     printf("\n");
     return;
