@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "2976fab48f1a200c",
+            "id": "1dbb378bb3b6e1c0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lesson 2 - Arrays/Lesson 2 - Arrays Notes.md",
+                "file": "Lesson 3 - Algorithms/Lesson 3 - Algorithms Notes.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Lesson 2 - Arrays/Lesson 2 - Arrays Notes.md",
+                "file": "Lesson 3 - Algorithms/Lesson 3 - Algorithms Notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Lesson 2 - Arrays/Lesson 2 - Arrays Notes.md",
+                "file": "Lesson 3 - Algorithms/Lesson 3 - Algorithms Notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Lesson 2 - Arrays/Lesson 2 - Arrays Notes.md"
+                "file": "Lesson 3 - Algorithms/Lesson 3 - Algorithms Notes.md"
               }
             }
           }
@@ -146,8 +146,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2976fab48f1a200c",
+  "active": "1dbb378bb3b6e1c0",
   "lastOpenFiles": [
+    "Lesson 2 - Arrays/Lesson 2 - Arrays Notes.md",
+    "Lesson 3 - Algorithms/Lesson 3 - Algorithms Notes.md",
+    "Lesson 3 - Algorithms",
     "Lesson 2 - Arrays/Problem Set/wordle/wordle",
     "Lesson 2 - Arrays/Problem Set/wordle/wordle.c",
     "Lesson 2 - Arrays/Problem Set/wordle/7.txt",
@@ -157,8 +160,6 @@
     "Lesson 2 - Arrays/Problem Set/wordle",
     "Lesson 2 - Arrays/Problem Set/wordle.zip",
     "Lesson 2 - Arrays/Problem Set/substitution/substitution",
-    "Lesson 2 - Arrays/Problem Set/substitution/substitution.c",
-    "Lesson 2 - Arrays/Problem Set/substitution",
     "libcs50-11.0.2/README.md",
     "libcs50-11.0.2 copy/README.md",
     "Lesson 2 - Arrays/libcs50-11.0.2 copy/README.md",
@@ -168,7 +169,6 @@
     "Quake/QW/client/quakeworld.bmp",
     "Lesson 2 - Arrays/libcs50-11.0.2/README.md",
     "Lesson 1 - C/libcs50-11.0.2/README.md",
-    "Lesson 1 - C/Lesson 1 C Notes.md",
-    "Lesson 2 - Arrays/Lesson 2 - Arrays Notes.md"
+    "Lesson 1 - C/Lesson 1 C Notes.md"
   ]
 }
