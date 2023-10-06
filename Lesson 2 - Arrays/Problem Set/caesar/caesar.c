@@ -4,7 +4,8 @@
 #include <ctype.h>
 #include <string.h>
 
-string encode(string plaintext, int key, char *lowercase, char *uppercase);
+// string encode(string plaintext, int key, char *lowercase, char *uppercase);
+char rotate(char c, int key);
 bool isNonNegativeInteger(string str);
 
 int main(int argc, string argv[])
@@ -34,16 +35,36 @@ int main(int argc, string argv[])
     lowercase[x] = '\0'; // null terminate the array
     uppercase[x] = '\0';
 
-    // printf("%s \n %s", lowercase, uppercase);
-
     string plaintext = get_string("plaintext: ");
+    for (int i = 0; i < strlen(plaintext); i++)
+    {
+        printf("%c", rotate(plaintext[i], key));
+    }
 
-    printf("ciphertext: %s", encode(plaintext, key, lowercase, uppercase));
+    // printf("ciphertext: %s", encode(plaintext, key, lowercase, uppercase));
     printf("\n");
     return 0;
 }
 
-string encode(string plaintext, int key, char *lowercase, char *uppercase)
+char rotate(char c, int key)
+{
+    if (isalpha(c))
+    {
+        if (islower(c))
+        {
+            c = c + key;
+            //printf("Lowercase");
+        }
+        else if (isupper(c))
+        {
+            c = c + key;
+            //printf("Uppercase");
+        }
+    }
+    return c;
+}
+
+/* string encode(string plaintext, int key, char *lowercase, char *uppercase)
 {
     int length = strlen(plaintext);
     char *cipher = malloc(length + 1); // +1 for the null terminator
@@ -56,8 +77,8 @@ string encode(string plaintext, int key, char *lowercase, char *uppercase)
 
     for (int i = 0; i < length; i++)
     {
-        printf("%c", cipher[i]);
-        int index = ((int)plaintext[i] + key) % 25;
+        //printf("%c", cipher[i]);
+        int index = ((int)plaintext[i] + key) % 26;
         printf("Index %i %c", index, plaintext[i + index]);
         if (isalpha(plaintext[i]))
         {
@@ -65,12 +86,12 @@ string encode(string plaintext, int key, char *lowercase, char *uppercase)
             if (islower(plaintext[i]))
             {
 
-                // cipher[i] = lowercase[(int)plaintext[i] + index];
+                cipher[i] = lowercase[plaintext[i] + index];
                 //printf("%i", ((int)cipher[i] + index));
             }
             else
             {
-                // cipher[i] = uppercase[(int)plaintext[i] + index];
+                cipher[i] = uppercase[plaintext[i] + index];
                 //printf("%i", ((int)cipher[i] + index));
             }
             printf("\n");
@@ -80,7 +101,7 @@ string encode(string plaintext, int key, char *lowercase, char *uppercase)
     cipher[length] = '\0'; // Null-terminate the cipher string
 
     return cipher;
-}
+} */
 bool isNonNegativeInteger(string str)
 {
     for (int i = 0; str[i] != '\0'; i++)
