@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 #define NK_IMPLEMENTATION
-#include "nuklear.h"
+#include <nuklear.h>
 
 #define MAX_VERTEX_BUFFER 512 * 1024
 #define MAX_ELEMENT_BUFFER 128 * 1024
@@ -10,9 +11,9 @@
 
 int main(void)
 {
-    /* init gui state */
+    /* Initialize GUI state */
     struct nk_context ctx;
-    nk_init_fixed(&ctx, calloc(1, MAX_MEMORY), MAX_MEMORY, &font);
+    nk_init_fixed(&ctx, calloc(1, MAX_MEMORY), MAX_MEMORY, *font);
 
     enum
     {
