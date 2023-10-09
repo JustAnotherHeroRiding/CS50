@@ -1,6 +1,6 @@
 
 ## Important Links
-- [Lesson Timestamp](https://youtu.be/9rT9vYlYVos?t=3248)
+- [Lesson Timestamp](https://youtu.be/9rT9vYlYVos?t=8308)
 - [Section](https://cs50.harvard.edu/x/2023/sections/3/)
 - [Practice Problems](https://cs50.harvard.edu/x/2023/problems/3/)
 - [Lab 3](https://cs50.harvard.edu/x/2023/labs/3/)
@@ -42,3 +42,31 @@
     - Description: Often seen in algorithms that divide the input in half at each step, such as binary search. It's better than linear but not as good as logarithmic.
 
 These are some of the most commonly used Big O notations to describe the time complexity of algorithms. It's important to analyze and understand the time complexity of algorithms to make informed decisions about their efficiency when working on software development projects.
+
+
+## Sorting Algorithms
+
+### Selection Sort
+
+- Selection sort will compare each element and save the smallest element
+- After checking the entire array, it will place the smallest element at index 0 and then start from index
+- It will then place the 2nd smallest element at index 1 until the entire array is sorted
+- This takes O(n^2) as it will always run a loop for each element, and then loop over again to check the element
+
+### Bubble sort
+
+- Bubble Sort will take the current element and compare it to the next one, if the next one is smaller, it will swap them
+- This will push the biggest elements to the top
+- Here we compare up until n - 2 so that we do not go out of bounds and since we will access the last element when we check n -2 and it's next element which is n - 1
+- However this is still running in O(n^2)
+- The formula for this is n^2 - 2n + 1, however 2n and +1 are very small and can be discarded in the big picture
+- If there are no swaps in one loop, we can conclude that it is sorted
+
+
+### Recursion
+
+
+### Merge Sort
+
+
+### Sorting Algorithms
