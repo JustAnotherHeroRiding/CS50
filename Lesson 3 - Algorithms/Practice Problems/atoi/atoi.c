@@ -25,12 +25,10 @@ int main(void)
 
 int convert(string input)
 {
-    int result = (int)input[strlen(input) - 1];
-    // TODO
-    if (strlen(input) > 1)
-    {
-        input[strlen(input) - 1] = '\0'; // Set the last character to null terminator
-        result += convert(input);        // Recursively call the function with the shortened string
-    }
-    return result;
+    if (strlen(input) == 1)
+        return input[0] - '0';
+    char result = input[strlen(input) - 1] - '0';
+
+    input[strlen(input) - 1] = '\0';
+    return result + 10 * convert(input);
 }
