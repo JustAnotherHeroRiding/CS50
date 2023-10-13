@@ -62,4 +62,26 @@ int main(void)
 void sort_cities(void)
 {
     // Add your code here
+    for (int i = 0; i < NUM_CITIES; i++)
+    {
+        // Here we need to implement the sorting algorithm
+        // Let us try Selection sort as it is the simplest
+        // This algo will compare each element and save the smallest temp value
+        // At the end of the loop it will place the smallest temp value in the first position
+        // We keep looping over until the array is sorted(we looped n times over the array)
+        int smallest_temp_index = i;
+        avg_temp temp = temps[i];
+        for (int j = i + 1; j < NUM_CITIES; i++)
+        {
+            if (temps[j].temp < temps[smallest_temp_index].temp)
+            {
+                smallest_temp_index = j;
+                temp = temps[j];
+            }
+            temps[i] = temps[smallest_temp_index];
+        }
+    }
+    // Here we need to implement a sorting algorithm for the temperatures
+    // We can use one of the sorting algorithms we learned in class
+    // possibly bubble sort, selection sort, or insertion sort
 }
