@@ -55,6 +55,7 @@ int main(void)
     for (int i = 0; i < NUM_CITIES; i++)
     {
         printf("%s: %i\n", temps[i].city, temps[i].temp);
+        // printf("Largest temp %i: \n", temps[i].temp);
     }
 }
 
@@ -62,23 +63,29 @@ int main(void)
 void sort_cities(void)
 {
     // Add your code here
-    for (int i = 0; i < NUM_CITIES; i++)
+    for (int i = 0; i < NUM_CITIES - 1; i++)
     {
         // Here we need to implement the sorting algorithm
         // Let us try Selection sort as it is the simplest
-        // This algo will compare each element and save the smallest temp value
-        // At the end of the loop it will place the smallest temp value in the first position
+        // This algo will compare each element and save the largest temp value
+        // At the end of the loop it will place the largest temp value in the first position
         // We keep looping over until the array is sorted(we looped n times over the array)
-        int smallest_temp_index = i;
-        avg_temp temp = temps[i];
-        for (int j = i + 1; j < NUM_CITIES; i++)
+        int largest_temp_index = i;
+        avg_temp largest_temp;
+        for (int j = i + 1; j < NUM_CITIES - 1; j++)
         {
-            if (temps[j].temp < temps[smallest_temp_index].temp)
+            largest_temp = temps[j];
+
+            if (temps[j].temp > temps[largest_temp_index].temp)
             {
-                smallest_temp_index = j;
-                temp = temps[j];
+                largest_temp_index = j;
+                largest_temp = temps[j];
             }
-            temps[i] = temps[smallest_temp_index];
+            temps[largest_temp_index] = temps[i];
+            temps[j] = temps[i];     // Swap the found largest temp with the current element
+            temps[i] = largest_temp; // Swap the current element with the temp
+
+            // printf("Largest temp: %s %i F \n", temps[j].city, temps[j].temp);
         }
     }
     // Here we need to implement a sorting algorithm for the temperatures
