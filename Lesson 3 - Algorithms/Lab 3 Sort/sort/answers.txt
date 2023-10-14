@@ -1,11 +1,13 @@
-sort1 uses: TODO
+sort1 uses: Bubble Sort
 
-How do you know?: TODO
+How do you know?: After running the sort 3 binary on the sorted 50000 text file, it had the fastest speed.
+A bubble sort will algorithm will exit if no swamps are made after one loop, which it seems to have happened here.
 
-sort2 uses: TODO
 
-How do you know?: TODO
+sort2 uses: Merge Sort
 
-sort3 uses: TODO
+How do you know?: Fastest on sorting random 50000
 
-How do you know?: TODO
+sort3 uses: Selection Sort
+
+How do you know?: Slowest on random 50000, while the time complexity is the same as bubble sort, it is a little slower still

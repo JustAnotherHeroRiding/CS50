@@ -3,7 +3,7 @@
 - [Lesson Timestamp](https://youtu.be/9rT9vYlYVos?t=8308) #DONE 
 - [Section](https://cs50.harvard.edu/x/2023/sections/3/) 
 - [Practice Problems](https://cs50.harvard.edu/x/2023/problems/3/) #DONE 
-- [Lab 3](https://cs50.harvard.edu/x/2023/labs/3/)
+- [Lab 3](https://cs50.harvard.edu/x/2023/labs/3/) #DONE 
 - [Problem Set 3](https://cs50.harvard.edu/x/2023/psets/3/)
 
 ## Algorithms Class Notes
