@@ -13,7 +13,7 @@
  * Cold Brew: $3
  * Water: $2
  * Soda: $2
-*/
+ */
 
 #include <cs50.h>
 #include <ctype.h>
@@ -30,14 +30,14 @@ typedef struct
 {
     string item;
     float price;
-}
-menu_item;
+} menu_item;
 
 // Array of menu items
 menu_item menu[NUM_ITEMS];
 
 // Add items to menu
 void add_items(void);
+void init_menu_item(menu_item *p, string item, float price);
 
 // Calculate total cost
 float get_cost(string item);
@@ -51,7 +51,7 @@ int main(void)
 
     for (int i = 0; i < NUM_ITEMS; i++)
     {
-        printf("%s: $%.2f\n", menu[i].item, menu[i]. price);
+        printf("%s: $%.2f\n", menu[i].item, menu[i].price);
     }
     printf("\n");
 
@@ -71,10 +71,53 @@ int main(void)
     printf("Your total cost is: $%.2f\n", total);
 }
 
+void init_menu_item(menu_item *p, string item, float price)
+{
+    if (p == NULL)
+        return;
+    p->item = item;
+    p->price = price;
+}
 // Add at least the first four items to the menu array
 void add_items(void)
 {
-    return;
+
+    string items[NUM_ITEMS] = {"Burger", "Vegan Burger", "Hot Dog", "Cheese Dog", "Fries", "Cheese Fries", "Cold Pressed Juice", "Cold Brew", "Water", "Soda"};
+    float prices[NUM_ITEMS] = {9.5, 11, 5, 7, 5, 6, 7, 3, 2, 2};
+
+    for (int i = 0; i < NUM_ITEMS; ++i)
+    {
+        init_menu_item(&menu[i], items[i], prices[i]);
+    }
+    /*  menu[0].item = "Burger";
+     menu[0].price = 9.5;
+
+     menu[1].item = "Vegan Burger";
+     menu[1].price = 11;
+
+     menu[2].item = "Hot Dog";
+     menu[2].price = 5;
+
+     menu[3].item = "Cheese Dog";
+     menu[3].price = 7;
+
+     menu[4].item = "Fries";
+     menu[4].price = 5;
+
+     menu[5].item = "Cheese Fries";
+     menu[5].price = 6;
+
+     menu[6].item = "Cold Pressed Juice";
+     menu[6].price = 7;
+
+     menu[7].item = "Cold Brew";
+     menu[7].price = 3;
+
+     menu[8].item = "Water";
+     menu[8].price = 2;
+
+     menu[9].item = "Soda";
+     menu[9].price = 2; */
 }
 
 // Search through the menu array to find an item's cost
