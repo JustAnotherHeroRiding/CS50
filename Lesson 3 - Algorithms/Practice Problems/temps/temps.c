@@ -15,6 +15,7 @@ typedef struct
 avg_temp temps[NUM_CITIES];
 
 void sort_cities(void);
+void sort_citiesOptimized(void);
 
 int main(void)
 {
@@ -71,27 +72,77 @@ int main(void)
       set element as new minimum
 
   swap minimum with first unsorted position */
-void sort_cities(void)
-{
-    int temp;
-    for (int i = 0; i < NUM_CITIES; i++)
-    {
-        temp = i;
 
-        for (int j = i; j < NUM_CITIES; j++)
+void sort_citiesOptimized(void)
+{
+    bool sorting = true;
+    while (sorting)
+    {
+        sorting = false; // Assume the array is sorted
+        for (int i = 0; i < NUM_CITIES - 1; i++)
         {
-            if (temps[j].temp > temps[temp].temp)
+            // Swap adjacent elements if they are in the wrong order
+            if (temps[i].temp < temps[i + 1].temp)
             {
-                temp = j;
+                avg_temp swap = temps[i];
+                temps[i] = temps[i + 1];
+                temps[i + 1] = swap;
+                sorting = true; // If a swap happened, the array might not be sorted yet
             }
         }
-        avg_temp swap = temps[i];
-        if (temp != i)
+    }
+}
+
+void sort_cities(void)
+{
+    // Bubble sort
+    // Take the current element and compare it to the next element
+    // If the current element is smaller than the next element, swap them
+    // If no swapping took place, the array is sorted
+    bool sorting = true;
+    while (sorting)
+    {
+        for (int i = 0; i < NUM_CITIES - 1; i++)
         {
-            temps[i] = temps[temp];
-            temps[temp] = swap;
+            int swaps = 0;
+
+            for (int j = 0; j < NUM_CITIES - 1; j++)
+            {
+                if (temps[j].temp < temps[j + 1].temp && j != i)
+                {
+                    avg_temp swap = temps[j];
+                    temps[j] = temps[j + 1];
+                    temps[j + 1] = swap;
+                    swaps++;
+                }
+            }
+            if (swaps == 0)
+            {
+                sorting = false;
+            }
         }
     }
+
+    // Selection sort working implementation
+    /*  int temp;
+     for (int i = 0; i < NUM_CITIES; i++)
+     {
+         temp = i;
+
+         for (int j = i; j < NUM_CITIES; j++)
+         {
+             if (temps[j].temp > temps[temp].temp)
+             {
+                 temp = j;
+             }
+         }
+         avg_temp swap = temps[i];
+         if (temp != i)
+         {
+             temps[i] = temps[temp];
+             temps[temp] = swap;
+         }
+     } */
 }
 // Add your code here
 // for (int i = 0; i < NUM_CITIES - 1; i++)
