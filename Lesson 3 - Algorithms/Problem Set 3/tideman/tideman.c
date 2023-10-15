@@ -1,5 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <strings.h>
 
 // Max number of candidates
 #define MAX 9
@@ -23,6 +24,7 @@ pair pairs[MAX * (MAX - 1) / 2];
 
 int pair_count;
 int candidate_count;
+int voter_count;
 
 // Function prototypes
 bool vote(int rank, string name, int ranks[]);
@@ -101,7 +103,8 @@ bool vote(int rank, string name, int ranks[])
     // TODO
     for (int i = 0; i < candidate_count; i++)
     {
-        if (name = candidates[i])
+
+        if (strcasecmp(candidates[i], name) == 0)
         {
             ranks[rank] = i;
             return true;
@@ -113,6 +116,13 @@ bool vote(int rank, string name, int ranks[])
 // Update preferences given one voter's ranks
 void record_preferences(int ranks[])
 {
+    for(int i = 0; i < voter_count; i++) {
+
+        for (int j = 0; j < candidate_count; j++) {
+            preferences[ranks[i]][j]++;
+        }
+
+    }
     // TODO
     return;
 }
