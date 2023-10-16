@@ -116,13 +116,17 @@ bool vote(int rank, string name, int ranks[])
 // Update preferences given one voter's ranks
 void record_preferences(int ranks[])
 {
-    for(int i = 0; i < voter_count; i++) {
+    // This is called in a for loop above for each voter so no need to loop over the voters here
+    //It is called with the ranks array where ranks[i] is the voter's ith preference
+    // This means ranks[0] is the first preference, ranks[1] is the second preference, etc.
 
-        for (int j = 0; j < candidate_count; j++) {
-            preferences[ranks[i]][j]++;
+    // This function updates the global preferences array to add the current voter's preferences
+    // preferences[i][j] is number of voters who prefer i over j
+    // Each voter will rank each candidate
+        for (int i = 0; i < candidate_count; i++) {
+            preferences[i][ranks[i]]++;
+            printf("Candidate rank: %i\n", preferences[i][ranks[i]]);
         }
-
-    }
     // TODO
     return;
 }
