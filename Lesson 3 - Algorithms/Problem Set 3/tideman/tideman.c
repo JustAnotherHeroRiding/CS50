@@ -137,23 +137,46 @@ void record_preferences(int ranks[])
     // The second voter will also update preferences[0][1] by 1 as he voted the same way
 
     // The result at the end is that preferences[0][1] will be 2
-    for (int i = 0; i < candidate_count - 1; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
-        preferences[ranks[i]][ranks[i + 1]]++;
+        for (int j = i + 1; j < candidate_count; j++)
+        {
+            preferences[ranks[i]][ranks[j]]++;
+        }
 
-        printf("Candidate: %s\n", candidates[i]);
-        printf("Candidate preference: %i over %s\n", preferences[i][ranks[i + 1]], candidates[ranks[i + 1]]);
-        printf("Candidate rank %i\n", ranks[i]);
+        // printf("Candidate: %s\n", candidates[i]);
+        // printf("Candidate preference: %i over %s\n", preferences[i][ranks[i + 1]], candidates[ranks[i + 1]]);
+        // printf("Candidate rank %i\n", ranks[i]);
     }
 
-    //printf("Final preference for %s over %s: %i", candidates[0], candidates[1], preferences[0][1]);
-    // TODO
+    // printf("Final preference for %s over %s: %i", candidates[0], candidates[1], preferences[0][1]);
+    //  TODO
     return;
 }
 
 // Record pairs of candidates where one is preferred over the other
 void add_pairs(void)
 {
+    for (int i = 0; i < candidate_count; i++)
+    {
+        for (int j = i + 1; j < candidate_count; j++)
+        {
+            if (preferences[i][j] > preferences[j][i])
+            {
+                pairs[pair_count].winner = i;
+                pairs[pair_count].loser = j;
+                pair_count++;
+                printf("Added pairs %s over %s\n", candidates[i], candidates[j]);
+            }
+            else if (preferences[i][j] < preferences[j][i])
+            {
+                pairs[pair_count].winner = j;
+                pairs[pair_count].loser = i;
+                pair_count++;
+                printf("Added pairs %s over %s\n", candidates[j], candidates[i]);
+            }
+        }
+    }
     // TODO
     return;
 }
