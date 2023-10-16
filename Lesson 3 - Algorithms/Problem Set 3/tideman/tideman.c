@@ -241,7 +241,7 @@ bool has_cycle(int start, int current)
     // Go through all nodes
     for (int i = 0; i < candidate_count; i++)
     {
-        // If the current node has an edge to node i
+        // If the current node has an edge(connection) to node i
         if (locked[current][i])
         {
             // If a cycle is found by traversing node i, return true
@@ -260,5 +260,16 @@ bool has_cycle(int start, int current)
 void print_winner(void)
 {
     // TODO
+    for (int i = 0; i < candidate_count; i++)
+    {
+        for (int j = 0; j < candidate_count; j++)
+        {
+            if (!locked[i][j])
+            {
+                printf("%s\n", candidates[i]);
+                return;
+            }
+        }
+    }
     return;
 }
