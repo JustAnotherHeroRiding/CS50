@@ -188,8 +188,8 @@ void sort_pairs(void)
     // In the previous function we have a struct
     for (int i = 0; i < pair_count; i++)
     {
-        printf("%s has %i votes,  %s has %i votes\n", candidates[pairs[i].winner], preferences[pairs[i].winner][pairs[i].loser],
-               candidates[pairs[i].loser], preferences[pairs[i].loser][pairs[i].winner]);
+        //printf("%s has %i votes,  %s has %i votes\n", candidates[pairs[i].winner], preferences[pairs[i].winner][pairs[i].loser], 
+        //candidates[pairs[i].loser], preferences[pairs[i].loser][pairs[i].winner]);
         int difference = preferences[pairs[i].winner][pairs[i].loser] - preferences[pairs[i].loser][pairs[i].winner];
         for (int j = i + 1; j < pair_count; j++)
         {
@@ -208,6 +208,16 @@ void sort_pairs(void)
 // Lock pairs into the candidate graph in order, without creating cycles
 void lock_pairs(void)
 {
+
+
+    // This loop will look in all the pairs but it won't check if there is a cycle
+    // How can we detect if locking in a pair will create a cycle?
+    // We have to somehow check the locked array
+    // How can we detect if a cycle is created in the locked in array?
+    for (int i = 0; i < pair_count; i++) {
+        printf("Winner: %s, Loser: %s\n", candidates[pairs[i].winner], candidates[pairs[i].loser]);
+        locked[pairs[i].winner][pairs[i].loser] = true;
+    }
     // TODO
     return;
 }

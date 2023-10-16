@@ -20,3 +20,9 @@ So, after processing these votes, your `preferences` array should look like th
 This shows that Alice is the most preferred candidate, Bob is the least preferred candidate, and Charlie is in the middle. This is the expected result given the votes from the two voters.
 
 To achieve this, you would need a nested loop in your `record_preferences` function, where for each rank `i`, you consider all following ranks `j` (where `j>i`) and increment `preferences[ranks[i]][ranks[j]]`.
+
+
+## Lock pairs
+
+Charlie beats both alice and bob
+alice beats bob
