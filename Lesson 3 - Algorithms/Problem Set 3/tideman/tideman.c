@@ -166,14 +166,14 @@ void add_pairs(void)
                 pairs[pair_count].winner = i;
                 pairs[pair_count].loser = j;
                 pair_count++;
-                printf("Added pairs %s over %s\n", candidates[i], candidates[j]);
+                // printf("Added pairs %s over %s\n", candidates[i], candidates[j]);
             }
             else if (preferences[i][j] < preferences[j][i])
             {
                 pairs[pair_count].winner = j;
                 pairs[pair_count].loser = i;
                 pair_count++;
-                printf("Added pairs %s over %s\n", candidates[j], candidates[i]);
+                // printf("Added pairs %s over %s\n", candidates[j], candidates[i]);
             }
         }
     }
@@ -184,6 +184,23 @@ void add_pairs(void)
 // Sort pairs in decreasing order by strength of victory
 void sort_pairs(void)
 {
+    // Here we need to sort each pairs but i need to visualize them as I am not sure how to do this
+    // In the previous function we have a struct
+    for (int i = 0; i < pair_count; i++)
+    {
+        printf("%s has %i votes,  %s has %i votes\n", candidates[pairs[i].winner], preferences[pairs[i].winner][pairs[i].loser],
+               candidates[pairs[i].loser], preferences[pairs[i].loser][pairs[i].winner]);
+        int difference = preferences[pairs[i].winner][pairs[i].loser] - preferences[pairs[i].loser][pairs[i].winner];
+        for (int j = i + 1; j < pair_count; j++)
+        {
+            if (difference < preferences[pairs[j].winner][pairs[j].loser] - preferences[pairs[j].loser][pairs[j].winner])
+            {
+                pair temp = pairs[j];
+                pairs[j] = pairs[i];
+                pairs[i] = temp;
+            }
+        }
+    }
     // TODO
     return;
 }
