@@ -220,7 +220,7 @@ void lock_pairs(void)
         int winner = pairs[i].winner;
         int loser = pairs[i].loser;
 
-        printf("Winner: %s, Loser: %s\n", candidates[pairs[i].winner], candidates[pairs[i].loser]);
+        // printf("Winner: %s, Loser: %s\n", candidates[pairs[i].winner], candidates[pairs[i].loser]);
         if (!has_cycle(winner, loser))
         {
             locked[pairs[i].winner][pairs[i].loser] = true;
@@ -259,17 +259,23 @@ bool has_cycle(int start, int current)
 // Print the winner of the election
 void print_winner(void)
 {
-    // TODO
     for (int i = 0; i < candidate_count; i++)
     {
+        bool has_incoming_edge = false;
         for (int j = 0; j < candidate_count; j++)
         {
-            if (!locked[i][j])
+            if (locked[j][i]) // Check if there is an edge from candidate j to candidate i
             {
-                printf("%s\n", candidates[i]);
-                return;
+                has_incoming_edge = true;
+                break;
             }
         }
+
+        // If candidate i does not have any incoming edges, print their name and return
+        if (!has_incoming_edge)
+        {
+            printf("%s\n", candidates[i]);
+            return;
+        }
     }
-    return;
 }
