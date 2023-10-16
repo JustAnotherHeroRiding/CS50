@@ -117,16 +117,36 @@ bool vote(int rank, string name, int ranks[])
 void record_preferences(int ranks[])
 {
     // This is called in a for loop above for each voter so no need to loop over the voters here
-    //It is called with the ranks array where ranks[i] is the voter's ith preference
+    // It is called with the ranks array where ranks[i] is the voter's ith preference
     // This means ranks[0] is the first preference, ranks[1] is the second preference, etc.
 
     // This function updates the global preferences array to add the current voter's preferences
     // preferences[i][j] is number of voters who prefer i over j
     // Each voter will rank each candidate
-        for (int i = 0; i < candidate_count; i++) {
-            preferences[i][ranks[i]]++;
-            printf("Candidate rank: %i\n", preferences[i][ranks[i]]);
-        }
+
+    // If we have 2 candidates Alice and Bob
+    // If we have 2 voters, both rank Alice as first and Bob as second
+    // Then the ranks for the first voter will be [0, 1]
+    // The ranks for the second voter will be [0, 1] as he voted the same way
+
+    // Then this function will be called each voter
+
+    // For the first voter we need to update the preferences array using the two votes
+    // This means that preferences[0][1] will be incremented by 1
+
+    // The second voter will also update preferences[0][1] by 1 as he voted the same way
+
+    // The result at the end is that preferences[0][1] will be 2
+    for (int i = 0; i < candidate_count - 1; i++)
+    {
+        preferences[ranks[i]][ranks[i + 1]]++;
+
+        printf("Candidate: %s\n", candidates[i]);
+        printf("Candidate preference: %i over %s\n", preferences[i][ranks[i + 1]], candidates[ranks[i + 1]]);
+        printf("Candidate rank %i\n", ranks[i]);
+    }
+
+    //printf("Final preference for %s over %s: %i", candidates[0], candidates[1], preferences[0][1]);
     // TODO
     return;
 }
