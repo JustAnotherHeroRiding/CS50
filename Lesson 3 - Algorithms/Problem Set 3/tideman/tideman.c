@@ -33,6 +33,7 @@ void add_pairs(void);
 void sort_pairs(void);
 void lock_pairs(void);
 void print_winner(void);
+bool has_cycle(int winner, int loser);
 
 int main(int argc, string argv[])
 {
@@ -188,8 +189,8 @@ void sort_pairs(void)
     // In the previous function we have a struct
     for (int i = 0; i < pair_count; i++)
     {
-        //printf("%s has %i votes,  %s has %i votes\n", candidates[pairs[i].winner], preferences[pairs[i].winner][pairs[i].loser], 
-        //candidates[pairs[i].loser], preferences[pairs[i].loser][pairs[i].winner]);
+        // printf("%s has %i votes,  %s has %i votes\n", candidates[pairs[i].winner], preferences[pairs[i].winner][pairs[i].loser],
+        // candidates[pairs[i].loser], preferences[pairs[i].loser][pairs[i].winner]);
         int difference = preferences[pairs[i].winner][pairs[i].loser] - preferences[pairs[i].loser][pairs[i].winner];
         for (int j = i + 1; j < pair_count; j++)
         {
@@ -209,17 +210,50 @@ void sort_pairs(void)
 void lock_pairs(void)
 {
 
-
     // This loop will look in all the pairs but it won't check if there is a cycle
     // How can we detect if locking in a pair will create a cycle?
     // We have to somehow check the locked array
     // How can we detect if a cycle is created in the locked in array?
-    for (int i = 0; i < pair_count; i++) {
+    // Maybe if we check if the previous winner is now the loser, we should skip it
+    for (int i = 0; i < pair_count; i++)
+    {
+        int winner = pairs[i].winner;
+        int loser = pairs[i].loser;
+
         printf("Winner: %s, Loser: %s\n", candidates[pairs[i].winner], candidates[pairs[i].loser]);
-        locked[pairs[i].winner][pairs[i].loser] = true;
+        if (!has_cycle(winner, loser))
+        {
+            locked[pairs[i].winner][pairs[i].loser] = true;
+        }
     }
     // TODO
     return;
+}
+
+bool has_cycle(int start, int current)
+{
+    // If the current node is the same as the start node, we have a cycle
+    if (start == current)
+    {
+        return true;
+    }
+
+    // Go through all nodes
+    for (int i = 0; i < candidate_count; i++)
+    {
+        // If the current node has an edge to node i
+        if (locked[current][i])
+        {
+            // If a cycle is found by traversing node i, return true
+            if (has_cycle(start, i))
+            {
+                return true;
+            }
+        }
+    }
+
+    // If no cycle is found, return false
+    return false;
 }
 
 // Print the winner of the election
