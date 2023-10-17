@@ -65,8 +65,45 @@ These are some of the most commonly used Big O notations to describe the time co
 
 ### Recursion
 
+- Recursion is a function that calls itself
+- Without an exit check it will go on forever
+- This was useful when traversing the nodes in the tideman problem
+##### Example
+```
+bool has_cycle(int start, int current)
+{
+    // If the current node is the same as the start node, we have a cycle
+    if (start == current)
+    {
+        return true;
+    }
+    // Go through all nodes
+    for (int i = 0; i < candidate_count; i++)
+    {
+        // If the current node has an edge(connection) to node i
+        if (locked[current][i])
+        {
+            // If a cycle is found by traversing node i, return true
+            if (has_cycle(start, i))
+            {
+                return true;
+            }
+        }
+    }
+
+    // If no cycle is found, return false
+    return false;
+}
+```
+- Here we keep calling the function inside of a for loop, which will check if each node has a connection to the index being checked
+- If all the checks keep returning false, then pair will be locked
+- If even one check return true, then the cycle is confirmed and the pair will be skipped
 
 ### Merge Sort
+- Merge sort is more efficient as in the best case scenario, it will be slower than the above algorithms, but in the worst case scenario will be `O(n * log n)`
+- This is because it will divide each half, then keep diving until there is only one element which is sorted as there is nothing to compare it to
+- Then it will sort both pairs of 2 elements, which will make sorting the pairs of 4 elements much easier
+<img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/mergesort/merge_sort-what-img1.png">
 
 
 ### Sorting Algorithms

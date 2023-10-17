@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "3fcc3e79bd81638e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Lesson 3 - Algorithms/Lesson 3 - Algorithms Notes.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -146,10 +159,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2be412f6a42be4f8",
+  "active": "3fcc3e79bd81638e",
   "lastOpenFiles": [
-    "Lesson 3 - Algorithms/Problem Set 3/Tideman.md",
+    "Lesson 3 - Algorithms/mergeSort.js",
+    "Lesson 3 - Algorithms/mergeSort.ts",
+    "Lesson 4 - Memory/Lesson 4 - Notes.md",
     "Lesson 3 - Algorithms/Lesson 3 - Algorithms Notes.md",
+    "Lesson 4 - Memory",
+    "Lesson 3 - Algorithms/Problem Set 3/Tideman.md",
     "Lesson 3 - Algorithms/Problem Set 3/tideman/tideman",
     "Lesson 3 - Algorithms/Problem Set 3/tideman/tideman.c",
     "Lesson 3 - Algorithms/Problem Set 3/tideman",
@@ -158,8 +175,6 @@
     "Lesson 3 - Algorithms/Problem Set 3/runoff/runoff.c",
     "Lesson 3 - Algorithms/Problem Set 3/runoff",
     "Lesson 3 - Algorithms/Problem Set 3/runoff.zip",
-    "Lesson 3 - Algorithms/Problem Set 3/plurality/plurality",
-    "Lesson 3 - Algorithms/Problem Set 3/plurality/plurality.c",
     "Lesson 3 - Algorithms/Practice Problems/snackbar/beach-g1e2b206d7_1280.jpg",
     "Lesson 3 - Algorithms/Practice Problems/snackbar/README.md",
     "GUI Experiment/Nuklear_Tutorial/README.md",
