@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lesson 3 - Algorithms/Problem Set 3/Tideman.md",
+                "file": "Lesson 3 - Algorithms/Lesson 3 - Algorithms Notes.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Lesson 3 - Algorithms/Problem Set 3/Tideman.md",
+                "file": "Lesson 3 - Algorithms/Lesson 3 - Algorithms Notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Lesson 3 - Algorithms/Problem Set 3/Tideman.md",
+                "file": "Lesson 3 - Algorithms/Lesson 3 - Algorithms Notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Lesson 3 - Algorithms/Problem Set 3/Tideman.md"
+                "file": "Lesson 3 - Algorithms/Lesson 3 - Algorithms Notes.md"
               }
             }
           }
@@ -148,8 +148,8 @@
   },
   "active": "2be412f6a42be4f8",
   "lastOpenFiles": [
-    "Lesson 3 - Algorithms/Lesson 3 - Algorithms Notes.md",
     "Lesson 3 - Algorithms/Problem Set 3/Tideman.md",
+    "Lesson 3 - Algorithms/Lesson 3 - Algorithms Notes.md",
     "Lesson 3 - Algorithms/Problem Set 3/tideman/tideman",
     "Lesson 3 - Algorithms/Problem Set 3/tideman/tideman.c",
     "Lesson 3 - Algorithms/Problem Set 3/tideman",

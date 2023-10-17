@@ -215,6 +215,8 @@ void lock_pairs(void)
     // We have to somehow check the locked array
     // How can we detect if a cycle is created in the locked in array?
     // Maybe if we check if the previous winner is now the loser, we should skip it
+    // But this does not always mean that a pair will create a cycle
+    // The only way is to recursively crawl up the pairs to see if a pair has a cycle
     for (int i = 0; i < pair_count; i++)
     {
         int winner = pairs[i].winner;
