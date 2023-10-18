@@ -13,14 +13,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lesson 3 - Algorithms/Lesson 3 - Algorithms Notes.md",
+                "file": "Lesson 4 - Memory/Lesson 4 - Notes.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "3fcc3e79bd81638e",
+            "id": "a5249b13e9a4758a",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -31,8 +31,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Lesson 3 - Algorithms/Lesson 3 - Algorithms Notes.md",
+                "file": "Lesson 4 - Memory/Lesson 4 - Notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Lesson 3 - Algorithms/Lesson 3 - Algorithms Notes.md",
+                "file": "Lesson 4 - Memory/Lesson 4 - Notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Lesson 3 - Algorithms/Lesson 3 - Algorithms Notes.md"
+                "file": "Lesson 4 - Memory/Lesson 4 - Notes.md"
               }
             }
           }
@@ -159,12 +158,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3fcc3e79bd81638e",
+  "active": "2be412f6a42be4f8",
   "lastOpenFiles": [
+    "Lesson 4 - Memory/addresses",
+    "Lesson 4 - Memory/addresses.c",
+    "Lesson 3 - Algorithms/addresses.c",
+    "Lesson 3 - Algorithms/Lesson 3 - Algorithms Notes.md",
+    "Lesson 4 - Memory/Lesson 4 - Notes.md",
     "Lesson 3 - Algorithms/mergeSort.js",
     "Lesson 3 - Algorithms/mergeSort.ts",
-    "Lesson 4 - Memory/Lesson 4 - Notes.md",
-    "Lesson 3 - Algorithms/Lesson 3 - Algorithms Notes.md",
     "Lesson 4 - Memory",
     "Lesson 3 - Algorithms/Problem Set 3/Tideman.md",
     "Lesson 3 - Algorithms/Problem Set 3/tideman/tideman",
@@ -172,9 +174,6 @@
     "Lesson 3 - Algorithms/Problem Set 3/tideman",
     "Lesson 3 - Algorithms/Problem Set 3/tideman.zip",
     "Lesson 3 - Algorithms/Problem Set 3/runoff/runoff",
-    "Lesson 3 - Algorithms/Problem Set 3/runoff/runoff.c",
-    "Lesson 3 - Algorithms/Problem Set 3/runoff",
-    "Lesson 3 - Algorithms/Problem Set 3/runoff.zip",
     "Lesson 3 - Algorithms/Practice Problems/snackbar/beach-g1e2b206d7_1280.jpg",
     "Lesson 3 - Algorithms/Practice Problems/snackbar/README.md",
     "GUI Experiment/Nuklear_Tutorial/README.md",
