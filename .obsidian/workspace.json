@@ -158,8 +158,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "5155692c9bca6eae",
+  "active": "2be412f6a42be4f8",
   "lastOpenFiles": [
+    "Lesson 4 - Memory/practiceProblems/license/license",
+    "Lesson 4 - Memory/practiceProblems/license/license.c",
+    "Lesson 4 - Memory/practiceProblems/license/plates.txt",
+    "Lesson 4 - Memory/practiceProblems/license",
+    "Lesson 4 - Memory/practiceProblems/license.zip",
     "Lesson 4 - Memory/practiceProblems/bottomup/correct.bmp",
     "Lesson 4 - Memory/practiceProblems/bottomup/harvard_bottomup - Copy.bmp",
     "Lesson 4 - Memory/practiceProblems/bottomup/harvard_bottomup.bmp",
@@ -173,10 +178,6 @@
     "Lesson 4 - Memory/Lesson 4 - Notes.md",
     "Lesson 4 - Memory/practiceProblems/bottomup/bottomup.c",
     "Lesson 4 - Memory/practiceProblems/bottomup/bmp.h",
-    "Lesson 4 - Memory/practiceProblems/bottomup",
-    "Lesson 4 - Memory/practiceProblems/bottomup.zip",
-    "Lesson 4 - Memory/practiceProblems",
-    "Lesson 4 - Memory/class programs/practiceProblems",
     "Pasted image 20231019142135.png",
     "Lesson 3 - Algorithms/Lesson 3 - Algorithms Notes.md",
     "Lesson 3 - Algorithms/Problem Set 3/Tideman.md",
@@ -187,7 +188,6 @@
     "GUI Experiment/Nuklear/src/Readme.md",
     "GUI Experiment/Nuklear/example/skins/gwen.png",
     "GUI Experiment/Nuklear/example/images/image9.png",
-    "GUI Experiment/Nuklear/example/images/image8.png",
     "GUI Experiment/Nuklear/demo/sfml_opengl3/Readme.md",
     "GUI Experiment/Nuklear/demo/sfml_opengl2/Readme.md",
     "GUI Experiment/Nuklear/demo/sdl_opengles2/Readme.md",
