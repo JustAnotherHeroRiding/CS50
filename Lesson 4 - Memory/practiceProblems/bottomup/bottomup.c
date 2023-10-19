@@ -52,7 +52,11 @@ int main(int argc, char *argv[])
         printf("Unsupported file format.\n");
         return 4;
     }
+    // Calculate the new biHeight (make it positive)
+    int newBiHeight = abs(bi.biHeight);
 
+    // Modify the BITMAPINFOHEADER structure
+    bi.biHeight = newBiHeight;
     // Write outfile's BITMAPFILEHEADER
     fwrite(&bf, sizeof(BITMAPFILEHEADER), 1, outptr);
 
@@ -62,17 +66,21 @@ int main(int argc, char *argv[])
     // Determine padding for scanlines
     int padding = (4 - (bi.biWidth * sizeof(RGBTRIPLE)) % 4) % 4;
 
-    //printf("bmp Heigth: %i %i \n", bi.biHeight, abs(bi.biHeight));
+    // printf("bmp Heigth: %i %i \n", bi.biHeight, abs(bi.biHeight));
+
+    // Write the BITMAPINFOHEADER to the new file
+    // fwrite(&bi, sizeof(BITMAPINFOHEADER), 1, outptr);
+    // fwrite(&bi, sizeof(BITMAPINFOHEADER), 1, inptr);
 
     // Iterate over infile's scanlines
-    for (int i = 0, biHeight = bi.biHeight; i > biHeight; i--)
+    for (int i = 0, biHeight = abs(bi.biHeight); i < biHeight; i++)
     {
-        printf("line %i\n", i);
-        // Iterate over pixels in scanline
+        // printf("line %i\n" i);
+        //   Iterate over pixels in scanline
         for (int j = 0; j < bi.biWidth; j++)
         {
-            //printf("pixel %i\n", j);
-            // Temporary storage
+            // sprintf("pixel %i\n", j);
+            //  Temporary storage
             RGBTRIPLE triple;
 
             // Read RGB triple from infile
