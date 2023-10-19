@@ -52,11 +52,11 @@ int main(int argc, char *argv[])
         printf("Unsupported file format.\n");
         return 4;
     }
-    // Calculate the new biHeight (make it positive)
-    int newBiHeight = abs(bi.biHeight);
+  
 
-    // Modify the BITMAPINFOHEADER structure
-    bi.biHeight = newBiHeight;
+    // Modify the BITMAPINFOHEADER structure with a positive biHeigth.
+    // Previously it was negative since image was upside down
+    bi.biHeight = abs(bi.biHeight);
     // Write outfile's BITMAPFILEHEADER
     fwrite(&bf, sizeof(BITMAPFILEHEADER), 1, outptr);
 
