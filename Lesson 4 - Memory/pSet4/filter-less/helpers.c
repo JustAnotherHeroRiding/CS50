@@ -54,7 +54,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 }
 
 // Blur image
-void blur(int height, int width, RGBTRIPLE image[height][width])
+/* void blur(int height, int width, RGBTRIPLE image[height][width])
 {
 
     RGBTRIPLE copy[height][width];
@@ -74,14 +74,118 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         {
             if (i > 0 && i < height - 1 && j > 0 && j < width - 1)
             {
-                elements = 9;
-                average = (copy[i - 1][j - 1].rgbtRed + copy[i - 1][j].rgbtRed + 
-                copy[i - 1][j + 1].rgbtRed + copy[i][j - 1].rgbtRed + copy[i][j].rgbtRed + copy[i][j + 1].rgbtRed + 
-                copy[i + 1][j - 1].rgbtRed + copy[i + 1][j].rgbtRed + copy[i + 1][j + 1].rgbtRed) / 9.0;
-                image[i][j].rgbtRed = round(average);
-                image[i][j].rgbtGreen = round(average);
-                image[i][j].rgbtBlue = round(average);
+                float averageRed = (copy[i - 1][j - 1].rgbtRed + copy[i - 1][j].rgbtRed +
+                                    copy[i - 1][j + 1].rgbtRed + copy[i][j - 1].rgbtRed + copy[i][j].rgbtRed + copy[i][j + 1].rgbtRed +
+                                    copy[i + 1][j - 1].rgbtRed + copy[i + 1][j].rgbtRed + copy[i + 1][j + 1].rgbtRed) /
+                                   9.0;
+                float averageGreen = (copy[i - 1][j - 1].rgbtGreen + copy[i - 1][j].rgbtGreen +
+                                      copy[i - 1][j + 1].rgbtGreen + copy[i][j - 1].rgbtGreen + copy[i][j].rgbtGreen + copy[i][j + 1].rgbtGreen +
+                                      copy[i + 1][j - 1].rgbtGreen + copy[i + 1][j].rgbtGreen + copy[i + 1][j + 1].rgbtGreen) /
+                                     9.0;
+                float averageBlue = (copy[i - 1][j - 1].rgbtBlue + copy[i - 1][j].rgbtBlue +
+                                     copy[i - 1][j + 1].rgbtBlue + copy[i][j - 1].rgbtBlue + copy[i][j].rgbtBlue + copy[i][j + 1].rgbtBlue +
+                                     copy[i + 1][j - 1].rgbtBlue + copy[i + 1][j].rgbtBlue + copy[i + 1][j + 1].rgbtBlue) /
+                                    9.0;
+                image[i][j].rgbtRed = round(averageRed);
+                image[i][j].rgbtGreen = round(averageGreen);
+                image[i][j].rgbtBlue = round(averageBlue);
             }
+            else if (i == 0 && j > 0)
+            {
+                float averageRed = (copy[i][j - 1].rgbtRed + copy[i][j].rgbtRed + copy[i][j + 1].rgbtRed + copy[i + 1][j].rgbtRed + copy[i + 1][j + 1].rgbtRed + copy[i + 1][j - 1].rgbtRed) / 6.0;
+                float averageGreen = (copy[i][j - 1].rgbtGreen + copy[i][j].rgbtGreen + copy[i][j + 1].rgbtGreen + copy[i + 1][j].rgbtGreen + copy[i + 1][j + 1].rgbtGreen + copy[i + 1][j - 1].rgbtGreen) / 6.0;
+                float averageBlue = (copy[i][j - 1].rgbtBlue + copy[i][j].rgbtBlue + copy[i][j + 1].rgbtBlue + copy[i + 1][j].rgbtBlue + copy[i + 1][j + 1].rgbtBlue + copy[i + 1][j - 1].rgbtBlue) / 6.0;
+                image[i][j].rgbtRed = round(averageRed);
+                image[i][j].rgbtGreen = round(averageGreen);
+                image[i][j].rgbtBlue = round(averageBlue);
+            }
+            else if (i == 0 && j == width - 1)
+            {
+                float averageRed = (copy[i][j - 1].rgbtRed + copy[i][j].rgbtRed + copy[i + 1][j - 1].rgbtRed + copy[i + 1][j].rgbtRed) / 4.0;
+                float averageGreen = (copy[i][j - 1].rgbtGreen + copy[i][j].rgbtGreen + copy[i + 1][j - 1].rgbtGreen + copy[i + 1][j].rgbtGreen) / 4.0;
+                float averageBlue = (copy[i][j - 1].rgbtBlue + copy[i][j].rgbtBlue + copy[i + 1][j - 1].rgbtBlue + copy[i + 1][j].rgbtBlue) / 4.0;
+                image[i][j].rgbtRed = round(averageRed);
+                image[i][j].rgbtGreen = round(averageGreen);
+                image[i][j].rgbtBlue = round(averageBlue);
+            }
+            else if (i == height - 1 && j == width - 1)
+            {
+                float averageRed = (copy[i - 1][j - 1].rgbtRed + copy[i - 1][j].rgbtRed + copy[i - 1][j + 1].rgbtRed + copy[i][j - 1].rgbtRed + copy[i][j].rgbtRed + copy[i][j + 1].rgbtRed) / 6.0;
+                float averageGreen = (copy[i - 1][j - 1].rgbtGreen + copy[i - 1][j].rgbtGreen + copy[i - 1][j + 1].rgbtGreen + copy[i][j - 1].rgbtGreen + copy[i][j].rgbtGreen + copy[i][j + 1].rgbtGreen) / 6.0;
+                float averageBlue = (copy[i - 1][j - 1].rgbtBlue + copy[i - 1][j].rgbtBlue + copy[i - 1][j + 1].rgbtBlue + copy[i][j - 1].rgbtBlue + copy[i][j].rgbtBlue + copy[i][j + 1].rgbtBlue) / 6.0;
+                image[i][j].rgbtRed = round(averageRed);
+                image[i][j].rgbtGreen = round(averageGreen);
+                image[i][j].rgbtBlue = round(averageBlue);
+            }
+            else if (i == 0 && j == 0)
+            {
+                float averageRed = (copy[i][j].rgbtRed + copy[i][j + 1].rgbtRed + copy[i + 1][j].rgbtRed + copy[i + 1][j + 1].rgbtRed) / 4.0;
+                float averageGreen = (copy[i][j].rgbtGreen + copy[i][j + 1].rgbtGreen + copy[i + 1][j].rgbtGreen + copy[i + 1][j + 1].rgbtGreen) / 4.0;
+                float averageBlue = (copy[i][j].rgbtBlue + copy[i][j + 1].rgbtBlue + copy[i + 1][j].rgbtBlue + copy[i + 1][j + 1].rgbtBlue) / 4.0;
+                image[i][j].rgbtRed = round(averageRed);
+                image[i][j].rgbtGreen = round(averageGreen);
+                image[i][j].rgbtBlue = round(averageBlue);
+            }
+            else if (i == height - 1 && j == width - 1)
+            {
+                float averageRed = (copy[i][j].rgbtRed + copy[i][j - 1].rgbtRed + copy[i - 1][j].rgbtRed + copy[i - 1][j - 1].rgbtRed) / 4.0;
+                float averageGreen = (copy[i][j].rgbtGreen + copy[i][j - 1].rgbtGreen + copy[i - 1][j].rgbtGreen + copy[i - 1][j - 1].rgbtGreen) / 4.0;
+                float averageBlue = (copy[i][j].rgbtBlue + copy[i][j - 1].rgbtBlue + copy[i - 1][j].rgbtBlue + copy[i - 1][j - 1].rgbtBlue) / 4.0;
+                image[i][j].rgbtRed = round(averageRed);
+                image[i][j].rgbtGreen = round(averageGreen);
+                image[i][j].rgbtBlue = round(averageBlue);
+            }
+        }
+    }
+
+    return;
+}
+ */
+void blur(int height, int width, RGBTRIPLE image[height][width])
+{
+    RGBTRIPLE copy[height][width];
+
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            copy[i][j] = image[i][j];
+        }
+    }
+
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            float totalRed = 0;
+            float totalGreen = 0;
+            float totalBlue = 0;
+            int count = 0;
+
+            // Iterate over the 3x3 area surrounding the pixel
+            for (int di = -1; di <= 1; di++)
+            {
+                for (int dj = -1; dj <= 1; dj++)
+                {
+                    int ni = i + di;
+                    int nj = j + dj;
+
+                    // Skip pixels outside the image
+                    if (ni < 0 || ni >= height || nj < 0 || nj >= width)
+                    {
+                        continue;
+                    }
+
+                    totalRed += copy[ni][nj].rgbtRed;
+                    totalGreen += copy[ni][nj].rgbtGreen;
+                    totalBlue += copy[ni][nj].rgbtBlue;
+                    count++;
+                }
+            }
+
+            image[i][j].rgbtRed = round(totalRed / count);
+            image[i][j].rgbtGreen = round(totalGreen / count);
+            image[i][j].rgbtBlue = round(totalBlue / count);
         }
     }
 
