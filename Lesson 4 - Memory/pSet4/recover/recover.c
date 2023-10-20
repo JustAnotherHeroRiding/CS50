@@ -27,29 +27,40 @@ int main(int argc, char *argv[])
     int blockRead = 0;
     char buffer[BLOCK_SIZE];
     FILE *outptr = NULL;
+    char filename[8];
+
+    // Generate filename and try to open the file
+    sprintf(filename, "%03d.jpg", count);
+
+    // If the file exists, increment the counter and try again
+    // Now filename contains the name of the first non-existing file
+    outptr = fopen(filename, "w");
 
     while (fread(buffer, 1, BLOCK_SIZE, raw_file) == BLOCK_SIZE)
     {
-        if (buffer[0] =0xff && buffer[1]==0xd8 && buffer[2]==0xff && (buffer[3] & 0xf0) == 0xe0)
+        if (blockRead == 4)
         {
-            if (outptr != NULL)
+            break;
+        }
+        for (int i = 0; i < 4; i++)
+        {
+            printf("%c ", buffer[i]);
+        }
+        printf("\n");
+        if (1)
+        // if (buffer[0] = 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
+        {
+            /* if (outptr != NULL)
             {
                 fclose(outptr);
-            }
-            char filename[8];
+            } */
 
-            // Generate filename and try to open the file
-            sprintf(filename, "%03d.jpg", count);
-
-            // If the file exists, increment the counter and try again
-            // Now filename contains the name of the first non-existing file
-            outptr = fopen(filename, "w");
             if (outptr == NULL)
             {
                 printf("Could not create output file.\n");
                 return 1;
             }
-            count++;
+            // count++;
         }
         fwrite(buffer, 1, BLOCK_SIZE, outptr);
         blockRead++;
