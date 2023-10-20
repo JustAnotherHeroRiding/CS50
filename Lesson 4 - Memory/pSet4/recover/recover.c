@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
+#include <string.h>
 
 typedef uint8_t BYTE;
 #define BLOCK_SIZE 512
@@ -24,46 +25,47 @@ int main(int argc, char *argv[])
     }
 
     int count = 0;
-    int blockRead = 0;
     char buffer[BLOCK_SIZE];
     FILE *outptr = NULL;
-    char filename[8];
-
-    // Generate filename and try to open the file
-    sprintf(filename, "%03d.jpg", count);
-
-    // If the file exists, increment the counter and try again
-    // Now filename contains the name of the first non-existing file
-    outptr = fopen(filename, "w");
 
     while (fread(buffer, 1, BLOCK_SIZE, raw_file) == BLOCK_SIZE)
     {
-        if (blockRead == 4)
-        {
-            break;
-        }
-        for (int i = 0; i < 4; i++)
-        {
-            printf("%c ", buffer[i]);
-        }
-        printf("\n");
-        if (1)
-        // if (buffer[0] = 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
-        {
-            /* if (outptr != NULL)
-            {
-                fclose(outptr);
-            } */
 
-            if (outptr == NULL)
+        // Read the first 4 bytes of the buffer
+        unsigned char first_four_bytes[4];
+        memcpy(first_four_bytes, buffer, 4);
+
+        // Check if the first three bytes are 0xff, 0xd8, 0xff
+        if (first_four_bytes[0] == 0xff &&
+            first_four_bytes[1] == 0xd8 &&
+            first_four_bytes[2] == 0xff)
+        {
+            // Check if the first 4 bits of the fourth byte are 1110 (0xe)
+            // This is done by bitwise AND with 0xf0 and then comparing with 0xe0
+            if ((first_four_bytes[3] & 0xf0) == 0xe0)
             {
-                printf("Could not create output file.\n");
-                return 1;
+                char filename[8];
+
+                // Generate filename and try to open the file
+                sprintf(filename, "%03d.jpg", count);
+
+                // If the file exists, increment the counter and try again
+                // Now filename contains the name of the first non-existing file
+                outptr = fopen(filename, "w");
+                if (outptr == NULL)
+                {
+                    printf("Could not create output file.\n");
+                    return 1;
+                }
+                count++;
             }
-            // count++;
         }
-        fwrite(buffer, 1, BLOCK_SIZE, outptr);
-        blockRead++;
+
+        if (outptr != NULL)
+        {
+            fwrite(buffer, 1, BLOCK_SIZE, outptr);
+            //fclose(outptr);
+        }
     }
     if (outptr != NULL)
     {
