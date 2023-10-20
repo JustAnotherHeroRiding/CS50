@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 
     while (fread(buffer, 1, BLOCK_SIZE, raw_file) == BLOCK_SIZE)
     {
-        if (blockRead % 4 == 0)
+        if (buffer[0] =0xff && buffer[1]==0xd8 && buffer[2]==0xff && (buffer[3] & 0xf0) == 0xe0)
         {
             if (outptr != NULL)
             {
