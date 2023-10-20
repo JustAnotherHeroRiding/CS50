@@ -5,7 +5,7 @@
 - [Lesson 4 Timestamp](https://youtu.be/kY7wcPMqKtA?t=7546) #DONE 
 - [Section](https://cs50.harvard.edu/x/2023/sections/4/) 
 - [Practice Problems](https://cs50.harvard.edu/x/2023/problems/4/)  #DONE 
-- [Lab 4](https://cs50.harvard.edu/x/2023/labs/4/) 
+- [Lab 4](https://cs50.harvard.edu/x/2023/labs/4/) #DONE 
 - [Problem Set 4](https://cs50.harvard.edu/x/2023/psets/4/)
 
 
