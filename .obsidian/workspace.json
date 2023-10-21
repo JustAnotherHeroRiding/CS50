@@ -8,24 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "2be412f6a42be4f8",
+            "id": "f13ffe722a8b3259",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lesson 4 - Memory/Lesson 4 - Notes.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "a5249b13e9a4758a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Lesson 3 - Algorithms/Lesson 3 - Algorithms Notes.md",
+                "file": "Lesson 5 - Data Structures/Lesson 5 Notes.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Lesson 4 - Memory/Lesson 4 - Notes.md",
+                "file": "Lesson 5 - Data Structures/Lesson 5 Notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Lesson 4 - Memory/Lesson 4 - Notes.md",
+                "file": "Lesson 5 - Data Structures/Lesson 5 Notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Lesson 4 - Memory/Lesson 4 - Notes.md"
+                "file": "Lesson 5 - Data Structures/Lesson 5 Notes.md"
               }
             }
           }
@@ -158,15 +146,21 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2be412f6a42be4f8",
+  "active": "5155692c9bca6eae",
   "lastOpenFiles": [
-    "Lesson 4 - Memory/pSet4/reverse/output.wav",
-    "Lesson 4 - Memory/pSet4/reverse/reverse",
-    "Lesson 4 - Memory/pSet4/reverse/reverse.c",
-    "Lesson 4 - Memory/pSet4/reverse/input.wav",
-    "Lesson 4 - Memory/pSet4/reverse/wav.h",
-    "Lesson 4 - Memory/pSet4/reverse",
-    "Lesson 4 - Memory/pSet4/reverse.zip",
+    "Lesson 4 - Memory/pSet4/reverse/output/reversedBassman.wav",
+    "Lesson 4 - Memory/pSet4/reverse/output/output.wav",
+    "Lesson 4 - Memory/pSet4/reverse/output",
+    "Lesson 4 - Memory/pSet4/reverse/input/output",
+    "Lesson 4 - Memory/pSet4/reverse/input/namdumblewip.wav",
+    "Lesson 4 - Memory/pSet4/reverse/input/input.wav",
+    "Lesson 4 - Memory/pSet4/reverse/input",
+    "Lesson 4 - Memory/pSet4/reverse/namdumblewip.wav",
+    "Lesson 4 - Memory/pSet4/reverse/samplesReversed",
+    "Lesson 4 - Memory/pSet4/reverse/samplesReversed.c",
+    "Lesson 4 - Memory/Lesson 4 - Notes.md",
+    "Lesson 5 - Data Structures/Lesson 5 Notes.md",
+    "Lesson 5 - Data Structures",
     "Lesson 4 - Memory/pSet4/recover/049.jpg",
     "Lesson 4 - Memory/pSet4/recover/048.jpg",
     "Lesson 4 - Memory/pSet4/recover/047.jpg",
@@ -177,11 +171,6 @@
     "Lesson 4 - Memory/pSet4/recover/042.jpg",
     "Lesson 4 - Memory/pSet4/recover/041.jpg",
     "Lesson 4 - Memory/pSet4/recover/040.jpg",
-    "Lesson 4 - Memory/pSet4/recover/recover",
-    "Lesson 4 - Memory/pSet4/recover/recover.c",
-    "Lesson 4 - Memory/pSet4/recover/card.raw",
-    "Lesson 4 - Memory/pSet4/recover",
-    "Lesson 4 - Memory/Lesson 4 - Notes.md",
     "Lesson 3 - Algorithms/Lesson 3 - Algorithms Notes.md",
     "Lesson 3 - Algorithms/Problem Set 3/Tideman.md",
     "Lesson 3 - Algorithms/Practice Problems/snackbar/README.md",

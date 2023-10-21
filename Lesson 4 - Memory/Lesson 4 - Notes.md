@@ -6,13 +6,13 @@
 - [Section](https://cs50.harvard.edu/x/2023/sections/4/) 
 - [Practice Problems](https://cs50.harvard.edu/x/2023/problems/4/)  #DONE 
 - [Lab 4](https://cs50.harvard.edu/x/2023/labs/4/) #DONE 
-- [Problem Set 4](https://cs50.harvard.edu/x/2023/psets/4/)
+- [Problem Set 4](https://cs50.harvard.edu/x/2023/psets/4/) #DONE 
 
 
 
 
 ## Image
-### A bit map is an image represents an image
+### A bit map is a map of pixels representing an image
 
 # Go through the notes and write my own notes with an explanation of the concepts covered
 - RGB are just values of red green and blue, ranging from 0 to 255
