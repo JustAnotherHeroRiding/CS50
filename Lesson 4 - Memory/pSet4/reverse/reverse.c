@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
 
     // Write reversed audio to file
     // TODO #8
-    //char buffer[block_size];
+    // char buffer[block_size];
 
     // printf("%i\n", block_size);
 
@@ -71,11 +71,26 @@ int main(int argc, char *argv[])
     // Allocate memory for the buffer
     char *buffer = malloc(block_size);
 
-    // Loop from the last block to the first block
+    int remaining_bytes = filesize % block_size;
+
+    // If there are remaining bytes, read and write them first
+    if (remaining_bytes > 0)
+    {
+        // Move the file pointer to the start of the remaining bytes
+        fseek(input, sizeof(WAVHEADER), SEEK_SET);
+
+        // Read the remaining bytes into the buffer
+        fread(buffer, remaining_bytes, 1, input);
+
+        // Write the remaining bytes to the output file
+        fwrite(buffer, remaining_bytes, 1, output);
+    }
+
+    // Loop from the last full block to the first block
     for (int i = num_blocks - 1; i >= 0; i--)
     {
         // Move the file pointer to the start of the current block
-        fseek(input, i * block_size, SEEK_SET);
+        fseek(input, sizeof(WAVHEADER) + i * block_size, SEEK_SET);
 
         // Read the block into the buffer
         fread(buffer, block_size, 1, input);
