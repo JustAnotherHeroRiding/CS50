@@ -44,6 +44,9 @@ int main(int argc, char *argv[])
             // This is done by bitwise AND with 0xf0 and then comparing with 0xe0
             if ((first_four_bytes[3] & 0xf0) == 0xe0)
             {
+                if (outptr != NULL) {
+                    fclose(outptr);
+                }
                 char filename[8];
 
                 // Generate filename and try to open the file
@@ -67,13 +70,15 @@ int main(int argc, char *argv[])
         if (outptr != NULL)
         {
             fwrite(buffer, 1, BLOCK_SIZE, outptr);
-            //fclose(outptr);
+            // This also breaks it as I think the checks above are crucial to the program and this breaks them
+            // fclose(outptr);
         }
+        // This breaks the functionality
+        // fclose(outptr);
     }
     if (outptr != NULL)
     {
         fclose(outptr);
     }
-    fclose(raw_file);
     return 0;
 }
