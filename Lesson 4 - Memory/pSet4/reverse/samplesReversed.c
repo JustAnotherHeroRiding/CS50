@@ -46,10 +46,13 @@ int main(int argc, char *argv[])
     // Write header to file
     // TODO #6
     fwrite(&header, sizeof(WAVHEADER), 1, output);
+    printf("Format: %.4s\n", header.format);
+    printf("Bit depth: %d\n", header.bitsPerSample);
 
     // Use get_block_size to calculate size of block
     // TODO #7
     int block_size = get_block_size(header);
+    printf("Block size: %d\n", block_size);
 
     // Write reversed audio to file
     // TODO #8
@@ -126,6 +129,16 @@ int main(int argc, char *argv[])
 
     // Free the buffer
     free(buffer);
+
+    fseek(input, 0, SEEK_END);      // seek to end of file
+    long input_size = ftell(input); // get current file pointer
+    fseek(input, 0, SEEK_SET);      // seek back to beginning of file
+    printf("Size of input file: %ld bytes\n", input_size);
+
+    fseek(output, 0, SEEK_END);       // seek to end of file
+    long output_size = ftell(output); // get current file pointer
+    fseek(output, 0, SEEK_SET);       // seek back to beginning of file
+    printf("Size of output file: %ld bytes\n", output_size);
 
     fclose(input);
     fclose(output);
