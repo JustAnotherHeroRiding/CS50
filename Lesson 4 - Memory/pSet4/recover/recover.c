@@ -80,5 +80,6 @@ int main(int argc, char *argv[])
     {
         fclose(outptr);
     }
+    fclose(raw_file);
     return 0;
 }
