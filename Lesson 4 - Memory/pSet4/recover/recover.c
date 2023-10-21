@@ -51,6 +51,9 @@ int main(int argc, char *argv[])
 
                 // If the file exists, increment the counter and try again
                 // Now filename contains the name of the first non-existing file
+
+                // It seems that this line is leaking memory as there are 49 opened files at the end
+                // I tried closing them at the end of each loop but this broke the images instead
                 outptr = fopen(filename, "w");
                 if (outptr == NULL)
                 {
