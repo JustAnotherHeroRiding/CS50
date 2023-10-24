@@ -113,10 +113,12 @@ bool check(char *word)
 
     for (int i = 0, n = strlen(word); i < n; i++)
     {
+        //printf("i = %i\n", i);
+        // This checks if it is a null pointer which means it does not exist
         if (cursor->children[tolower(word[i]) - 'a'] == NULL)
         {
             return false;
-        }
+        } // This will check if this is the end meaning it is a word
         else if (cursor->children[tolower(word[i]) - 'a']->is_word)
         {
             return true;
@@ -128,7 +130,8 @@ bool check(char *word)
             {
                 tmp[j] = word[j];
             }
-            
+            word = tmp;
+            cursor = cursor->children[tolower(word[i]) - 'a'];
         }
     }
     return false;
