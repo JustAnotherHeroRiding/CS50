@@ -15,8 +15,7 @@ typedef struct node
 {
     bool is_word;
     struct node *children[SIZE_OF_ALPHABET];
-}
-node;
+} node;
 
 // Function prototypes
 bool check(char *word);
@@ -61,7 +60,7 @@ int main(int argc, char *argv[])
     }
 
     // Add words to the trie
-    while (fscanf(infile, "%s", name) == 1) 
+    while (fscanf(infile, "%s", name) == 1)
     {
         node *cursor = root;
 
@@ -108,8 +107,30 @@ int main(int argc, char *argv[])
 }
 
 // TODO: Complete the check function, return true if found, false if not found
-bool check(char* word)
+bool check(char *word)
 {
+    node *cursor = root;
+
+    for (int i = 0, n = strlen(word); i < n; i++)
+    {
+        if (cursor->children[tolower(word[i]) - 'a'] == NULL)
+        {
+            return false;
+        }
+        else if (cursor->children[tolower(word[i]) - 'a']->is_word)
+        {
+            return true;
+        }
+        else
+        {
+            char *tmp = malloc(sizeof(char) * n - i);
+            for (int j = i; j < n; j++)
+            {
+                tmp[j] = word[j];
+            }
+            
+        }
+    }
     return false;
 }
 
@@ -123,9 +144,9 @@ bool unload(void)
     return true;
 }
 
-void unloader(node* current)
+void unloader(node *current)
 {
-    
+
     // Iterate over all the children to see if they point to anything and go
     // there if they do point
     for (int i = 0; i < SIZE_OF_ALPHABET; i++)
