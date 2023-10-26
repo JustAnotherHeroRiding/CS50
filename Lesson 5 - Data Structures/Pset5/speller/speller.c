@@ -160,7 +160,6 @@ int main(int argc, char *argv[])
         printf("Could not unload %s.\n", dictionary);
         return 1;
     }
-
     // Calculate time to unload dictionary
     time_unload = calculate(&before, &after);
 

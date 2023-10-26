@@ -9,6 +9,8 @@
 // Represents a node in a hash table
 
 FILE *dictFile;
+unsigned int dictLength = 0;
+
 typedef struct node
 {
     char word[LENGTH + 1];
@@ -24,6 +26,19 @@ node *table[N];
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
+    int index = hash(word);
+    node *cursor = table[index];
+    while (cursor != NULL)
+    {
+        if (cursor->word == word)
+        {
+            return true;
+        }
+        else
+        {
+            cursor = cursor->next;
+        }
+    }
     // TODO
     return false;
 }
@@ -51,8 +66,21 @@ bool load(const char *dictionary)
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
 {
-    // TODO
-    return 0;
+
+    rewind(dictFile);
+    int c;
+
+    while ((c = fgetc(dictFile)) != EOF)
+    {
+        if (c == '\n')
+        {
+            dictLength++;
+        }
+        // printf("%s", buffer);
+    }
+    printf("%d\n", dictLength);
+
+    return dictLength;
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
