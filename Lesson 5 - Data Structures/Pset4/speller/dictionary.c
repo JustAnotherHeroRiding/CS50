@@ -2,16 +2,18 @@
 
 #include <ctype.h>
 #include <stdbool.h>
+#include <stdio.h>
 
 #include "dictionary.h"
 
 // Represents a node in a hash table
+
+FILE *dictFile;
 typedef struct node
 {
     char word[LENGTH + 1];
     struct node *next;
-}
-node;
+} node;
 
 // TODO: Choose number of buckets in hash table
 const unsigned int N = 26;
@@ -37,7 +39,13 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     // TODO
-    return false;
+    dictFile = fopen(dictionary, "r");
+    if (dictFile == NULL)
+    {
+        return false;
+    }
+
+    return true;
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
