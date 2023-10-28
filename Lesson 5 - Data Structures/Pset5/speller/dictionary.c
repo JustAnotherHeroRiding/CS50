@@ -55,8 +55,14 @@ unsigned int hash(const char *word)
     // Let us try a hash with the first 2 letters of the word
     if (strlen(word) > 1)
     {
-
-        return toupper(word[0]) - 'A' + toupper(word[1]) - 'A';
+        if (isalpha(word[1]))
+        {
+            return (toupper(word[0]) - 'A') + (toupper(word[1]) - 'A');
+        }
+        else
+        {
+            return toupper(word[0]) - 'A';
+        }
     }
     else
     {
@@ -73,6 +79,7 @@ bool load(const char *dictionary)
     {
         return false;
     }
+    // unsigned int bucketIndex = 0;
     char c;
     // Prepare to spell-check
     int index = 0;
@@ -120,8 +127,10 @@ bool load(const char *dictionary)
         {
             // Terminate current word
             word[index] = '\0';
+            unsigned int hashedValue = hash(word);
+            // printf("Hashed index %u\n", hashedValue);
 
-            // Let's try and insert the words at the beginning of the linked list instead of at the end
+            // Let's try and insert the words at the beginning of the linked list instead of at the ends
             if (table[hash(word)])
             {
                 // If there is already a node in the linked list at the hash index
@@ -145,6 +154,8 @@ bool load(const char *dictionary)
             }
             else
             {
+                // bucketIndex++;
+                // printf("Found a word! %u", bucketIndex);
 
                 table[hash(word)] = malloc(sizeof(node));
                 strcpy(table[hash(word)]->word, word);
