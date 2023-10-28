@@ -21,7 +21,7 @@ typedef struct node
 } node;
 
 // TODO: Choose number of buckets in hash table
-const unsigned int N = 26;
+const unsigned int N = 52;
 
 // Hash table
 node *table[N];
@@ -52,7 +52,16 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
-    return toupper(word[0]) - 'A';
+    // Let us try a hash with the first 2 letters of the word
+    if (strlen(word) > 1)
+    {
+
+        return toupper(word[0]) - 'A' + toupper(word[1]) - 'A';
+    }
+    else
+    {
+        return toupper(word[0]) - 'A';
+    }
 }
 
 // Loads dictionary into memory, returning true if successful, else false
@@ -68,7 +77,6 @@ bool load(const char *dictionary)
     // Prepare to spell-check
     int index = 0;
     char word[LENGTH + 1];
-
 
     // This is the way words are read in speller.c, but perhaps fscan(file, %s, word) will be much quicker
     // If fcanf returns EOF it means that the end of the file has been reached
