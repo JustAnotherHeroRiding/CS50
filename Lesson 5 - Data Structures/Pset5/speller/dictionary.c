@@ -49,16 +49,37 @@ bool check(const char *word)
 }
 
 // Hashes word to a number
-unsigned int hash(const char *word)
+/* unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
 
-    // Let's also try a hash using the sum of ascii value 
+    // Let's also try a hash using the sum of ascii value
     unsigned int asciiSum = 0;
     for (int i = 0; word[i] != '\0';i++) {
         asciiSum += (int) word[i];
     }
     return asciiSum % N;
+} */
+
+#define BASE 256
+
+unsigned int hash(const char *word)
+{
+    unsigned int hashValue = 0;
+    for (int i = 0; word[i] != '\0'; i++)
+    {
+        hashValue = (hashValue * BASE + word[i]) % N;
+    }
+    return hashValue;
+
+    /*  unsigned long hash = N;
+     int c;
+
+     while ((c = *word++))
+         hash = ((hash << 5) + hash) + c;
+         // hash * 33 + c
+
+     return hash;  */
 }
 
 // Loads dictionary into memory, returning true if successful, else false
