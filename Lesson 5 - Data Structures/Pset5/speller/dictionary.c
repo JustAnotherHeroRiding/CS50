@@ -69,6 +69,12 @@ bool load(const char *dictionary)
     int index = 0;
     char word[LENGTH + 1];
 
+
+    // This is the way words are read in speller.c, but perhaps fscan(file, %s, word) will be much quicker
+    // If fcanf returns EOF it means that the end of the file has been reached
+
+    // I have now started inserting the words at the begining of the linked list instead of at the end
+    // The speed is the same as the speller50 with 0.03 seconds
     while (fread(&c, sizeof(char), 1, dictFile))
     {
         // Allow only alphabetical characters and apostrophes
@@ -106,20 +112,18 @@ bool load(const char *dictionary)
         {
             // Terminate current word
             word[index] = '\0';
+
+            // Let's try and insert the words at the beginning of the linked list instead of at the end
             if (table[hash(word)])
             {
                 node *cursor = table[hash(word)];
-                while (cursor->next != NULL)
-                {
-                    cursor = cursor->next;
-                }
-                cursor->next = malloc(sizeof(node));
-                if (cursor->next == NULL)
-                {
-                    return false;
-                }
-                strcpy(cursor->next->word, word);
-                cursor->next->next = NULL;
+                node *tmp = cursor;
+                node *new = malloc(sizeof(node));
+                strcpy(new->word, word);
+                new->next = NULL;
+                cursor = new;
+                cursor->next = tmp;
+                table[hash(word)] = cursor;
             }
             else
             {
