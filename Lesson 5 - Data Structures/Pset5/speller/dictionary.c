@@ -116,13 +116,23 @@ bool load(const char *dictionary)
             // Let's try and insert the words at the beginning of the linked list instead of at the end
             if (table[hash(word)])
             {
+                // If there is already a node in the linked list at the hash index
+                // We create a cursor to it and a tmp copy
                 node *cursor = table[hash(word)];
                 node *tmp = cursor;
+
+                // Here we create the new node that we are about to add
                 node *new = malloc(sizeof(node));
+                // Copying the word
                 strcpy(new->word, word);
+                // Setting the next pointer to NULL
                 new->next = NULL;
+                // setting the cursor to the new nodes
+                // This is setting the pointer to the first node to be the pointer to the new node
                 cursor = new;
+                // The second element is then the tmp, which was the initial first element
                 cursor->next = tmp;
+                // Finally we add it to the hash table
                 table[hash(word)] = cursor;
             }
             else
