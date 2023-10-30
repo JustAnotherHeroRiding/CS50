@@ -3,7 +3,7 @@ import cs50
 
 
 height = cs50.get_int("Input an integer: ")
-while height < 0 or height >= 8:
+while height < 1 or height > 8:
     height = cs50.get_int("Input an integer: ")
     
     
