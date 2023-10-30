@@ -1,0 +1,3 @@
+- [Practice Problems](https://cs50.harvard.edu/x/2023/problems/6/)
+- [Lab 6](https://cs50.harvard.edu/x/2023/labs/6/)
+- [Problem Set 6](https://cs50.harvard.edu/x/2023/psets/6/)
