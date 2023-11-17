@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "2183348e8191e2f8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Lesson 7 - SQL/SQL Notes.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Lesson 6 - Python/python.md",
+                "file": "Lesson 7 - SQL/SQL Notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Lesson 6 - Python/python.md",
+                "file": "Lesson 7 - SQL/SQL Notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Lesson 6 - Python/python.md"
+                "file": "Lesson 7 - SQL/SQL Notes.md"
               }
             }
           }
@@ -146,8 +159,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f13ffe722a8b3259",
+  "active": "5155692c9bca6eae",
   "lastOpenFiles": [
+    "Lesson 6 - Python/python.md",
+    "Lesson 7 - SQL/SQL Notes.md",
     "React Use C/react-use-c/server.js",
     "React Use C/react-use-c/package.json",
     "React Use C/react-use-c/package-lock.json",
@@ -159,7 +174,6 @@
     "React Use C/react-use-c",
     "React Use C",
     "Lesson 6 - Python/sentimental-mario-more/mario.py",
-    "Lesson 6 - Python/sentimental-mario-more",
     "Lesson 5 - Data Structures/Lesson 5 Notes.md",
     "Lesson 4 - Memory/Lesson 4 - Notes.md",
     "Lesson 4 - Memory/pSet4/recover/049.jpg",
