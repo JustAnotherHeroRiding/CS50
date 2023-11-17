@@ -1,4 +1,5 @@
 # TODO
+import re
 
 
 def luhn_check(length, number):
@@ -34,6 +35,13 @@ def check_card(number, length):
     else:
         print("INVALID")
 
+def is_integer(s):
+    # This regex pattern checks for optional negative sign followed by digits
+    pattern = r"^-?\d+$"
+    return re.match(pattern, s) is not None
 
 number = input("Number: ")
-check_card(number, len(number))
+
+# Keep asking for input until a valid number is entered
+while not is_integer(number):
+    number = input("Number: ")
