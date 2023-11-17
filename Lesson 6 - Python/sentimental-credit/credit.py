@@ -28,20 +28,36 @@ def check_card(number, length):
         print("INVALID")
     elif number[0] == "4":
         print("VISA")
-    elif number[0] == '5' and (number[1] == '1' or number[1] == '2' or number[1] == '3' or number[1] == '4' or number[1] == '5'):
+    elif number[0] == "5" and (
+        number[1] == "1"
+        or number[1] == "2"
+        or number[1] == "3"
+        or number[1] == "4"
+        or number[1] == "5"
+    ):
         print("MASTERCARD")
-    elif number[0] == '3' and (number[1] == '4' or number[1] == '7'):
+    elif number[0] == "3" and (number[1] == "4" or number[1] == "7"):
         print("AMEX")
     else:
         print("INVALID")
+
 
 def is_integer(s):
     # This regex pattern checks for optional negative sign followed by digits
     pattern = r"^-?\d+$"
     return re.match(pattern, s) is not None
 
+
+def is_integer(s):
+    # This regex pattern checks for optional negative sign followed by digits
+    pattern = r"^-?\d+$"
+    return re.match(pattern, s) is not None
+
+
 number = input("Number: ")
 
 # Keep asking for input until a valid number is entered
 while not is_integer(number):
     number = input("Number: ")
+
+check_card(number, len(number))
