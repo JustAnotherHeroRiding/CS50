@@ -30,9 +30,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "fcfcbb4975655400",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Lesson 7 - SQL/SQL Notes.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -159,21 +171,22 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "5155692c9bca6eae",
+  "active": "fcfcbb4975655400",
   "lastOpenFiles": [
-    "Lesson 6 - Python/python.md",
+    "Final Project/Ideas.md",
+    "Lesson 7 - SQL/favorites/favorites.db-journal",
+    "Lesson 7 - SQL/favorites/favorites.db",
+    "Lesson 7 - SQL/favorites/favoritesSql.db",
     "Lesson 7 - SQL/SQL Notes.md",
-    "React Use C/react-use-c/server.js",
-    "React Use C/react-use-c/package.json",
-    "React Use C/react-use-c/package-lock.json",
-    "React Use C/react-use-c/index.html",
-    "React Use C/react-use-c/client.jsx",
-    "React Use C/react-use-c/build.js",
+    "Lesson 7 - SQL/favorites/favorites.py",
+    "Lesson 7 - SQL/favorites/favorites.csv",
+    "Lesson 7 - SQL/favorites",
+    "Lesson 7 - SQL/favorites.py",
+    "Lesson 7 - SQL/favorites.csv",
+    "Lesson 7 - SQL/favorites.db",
+    "Lesson 7 - SQL/shows.db",
+    "Lesson 6 - Python/python.md",
     "React Use C/react-use-c/README.md",
-    "React Use C/react-use-c/Makefile",
-    "React Use C/react-use-c",
-    "React Use C",
-    "Lesson 6 - Python/sentimental-mario-more/mario.py",
     "Lesson 5 - Data Structures/Lesson 5 Notes.md",
     "Lesson 4 - Memory/Lesson 4 - Notes.md",
     "Lesson 4 - Memory/pSet4/recover/049.jpg",
