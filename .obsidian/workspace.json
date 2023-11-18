@@ -8,30 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "f13ffe722a8b3259",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Lesson 6 - Python/python.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "2183348e8191e2f8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Lesson 7 - SQL/SQL Notes.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "fcfcbb4975655400",
             "type": "leaf",
             "state": {
@@ -43,8 +19,7 @@
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -173,18 +148,19 @@
   },
   "active": "fcfcbb4975655400",
   "lastOpenFiles": [
+    "Lesson 7 - SQL/PracticeProblems/prophecy/students.csv",
+    "Lesson 7 - SQL/PracticeProblems/prophecy/roster.db",
+    "Lesson 7 - SQL/PracticeProblems/prophecy/schema.sql",
+    "Lesson 7 - SQL/PracticeProblems/prophecy",
+    "Lesson 7 - SQL/PracticeProblems/prophecy.zip",
+    "Lesson 7 - SQL/PracticeProblems/favorites/favorites.sql",
+    "Lesson 7 - SQL/PracticeProblems/favorites/favorites.db",
+    "Lesson 7 - SQL/PracticeProblems/favorites",
+    "Lesson 7 - SQL/PracticeProblems/favorites.zip",
+    "Lesson 7 - SQL/PracticeProblems",
+    "Lesson 7 - SQL/favorites/PracticeProblems",
     "Final Project/Ideas.md",
-    "Lesson 7 - SQL/favorites/favorites.db-journal",
-    "Lesson 7 - SQL/favorites/favorites.db",
-    "Lesson 7 - SQL/favorites/favoritesSql.db",
     "Lesson 7 - SQL/SQL Notes.md",
-    "Lesson 7 - SQL/favorites/favorites.py",
-    "Lesson 7 - SQL/favorites/favorites.csv",
-    "Lesson 7 - SQL/favorites",
-    "Lesson 7 - SQL/favorites.py",
-    "Lesson 7 - SQL/favorites.csv",
-    "Lesson 7 - SQL/favorites.db",
-    "Lesson 7 - SQL/shows.db",
     "Lesson 6 - Python/python.md",
     "React Use C/react-use-c/README.md",
     "Lesson 5 - Data Structures/Lesson 5 Notes.md",

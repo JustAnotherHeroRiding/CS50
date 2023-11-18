@@ -1,4 +1,4 @@
-import csv
+""" import csv
 from collections import Counter
 
 with open("favorites.csv", "r") as file:
@@ -8,4 +8,16 @@ with open("favorites.csv", "r") as file:
 
 
 favorite = input("Favorite: ")
-print(f"{favorite}: {counts[favorite.capitalize()]}")
+print(f"{favorite}: {counts[favorite.capitalize()]}") """
+
+from cs50 import SQL
+
+db = SQL("sqlite:///favorites.db")
+
+favorite = input("Favorite: ")
+
+#allData = db.execute("SELECT * FROM favorites LIMIT 10;")
+rows = db.execute("SELECT COUNT(*) AS n FROM favorites WHERE problem = ?;", favorite)
+row = rows[0]
+
+print(rows)
