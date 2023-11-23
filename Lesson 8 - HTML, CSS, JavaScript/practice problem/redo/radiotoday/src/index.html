@@ -5,10 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Tailwind Radioshack</title>
     <link rel="stylesheet" href="../dist/output.css" />
+    <script defer src="main.js"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/p5@1.8.0/lib/p5.js"
+    ></script>
   </head>
   <body class="relative flex flex-col">
     <nav
-      class="bg-radio-100 h-16 w-full sticky top-0 flex items-center justify-start font-sans text-radio-500 text-[1em] leading-none gap-4 py-10"
+      class="bg-radio-100 h-16 w-full sticky z-[3] top-0 flex items-center justify-start font-sans text-radio-500 text-[1em] leading-none gap-4 py-10 border-b shadow-sm shadow-radio-500"
     >
       <img
         src="../radioshack-logo.png"
@@ -23,11 +28,56 @@
       <p class="flex flex-col"><span>Product</span> Support</p>
     </nav>
 
-    <header>
-      <!-- Animated background section with a looping video, however i will use a cool animation instead of the
-      flashing video currently used, I want it to be more low key and react to mouse hover -->
+    <header
+      class="flex header justify-center items-center min-h-[40vh] relative overflow-hidden"
+    >
+      <h1
+        class="text-[4rem] font-bold text-center z-[2] text-radio-500 border border-radio-400 bg-radio-100 p-4 rounded-lg"
+      >
+        RadioShack
+      </h1>
+      <div class="absolute top-0 left-0 w-full h-full" id="p5-canvas"></div>
+      <!-- Container for the p5.js canvas -->
     </header>
-    <section class="bg-radio-100 mt-auto flex flex-col items-center py-8 text-radio-400 gap-8">
+    <section
+      class="bg-radio-100 px-4 mt-auto h-fit flex flex-row justify-center items-center py-8 text-radio-500 gap-8"
+    >
+      <div class="w-1/2">
+        <h1 class="text-center gap-4 flex flex-col text-6xl font-serif">
+          Our <span>Story</span>
+        </h1>
+      </div>
+      <div class="w-1/2 p-4 border rounded-xl shadow-md shadow-radio-300">
+        <img
+          src="../radioshack-logo.png"
+          alt="logo"
+          class="w-36 h-auto bg-radio-500 px-4 py-2 rounded-md mb-8"
+        />
+        <p class="break-after-period pr-16">
+          RadioShack is an American chain of consumer electronics stores since
+          1921. In 1998 it began operations with Unicomer Group in Central
+          America as a North American style store selling technology products
+          and accessories. In 2015, Unicomer Group acquired RadioShack
+          International Brand, Intellectual Property and Franchise rights for
+          Central America, South America, and the Caribbean. In 2023, Unicomer
+          Group acquired RadioShack's intellectual property assets and domains
+          in about 70 countries around the world, including: the United States,
+          Canada, Europe, and China; and aims to manage the business of
+          technology products with excellence, generating long-term profitable
+          relationships with our partners. This acquisition consolidates
+          Unicomer Group as the majority owner of the brand worldwide, leading
+          the technology market and expanding its value offer for its clients.
+          We want to continue developing the business, in as many territories as
+          possible, creating support plans for operations, reaching our
+          customers with our broad portfolio of products, looking for the best
+          prices and constant innovation to provide solutions to technological
+          problems. “A company is only as good as the people it has“
+        </p>
+      </div>
+    </section>
+    <section
+      class="bg-radio-100 mt-auto flex flex-col items-center py-8 text-radio-400 gap-8"
+    >
       <h1>We're here for you, let us know how we can help you</h1>
       <div class="flex flex-row gap-8">
         <p>customerservice@radioshack.com</p>
@@ -46,12 +96,19 @@
       />
       <!-- A footer with contact info and a number -->
     </section>
-    <footer class="flex flex-col items-center justify-center">
-      <p>© 2023 RadioShack</p>
+    <footer
+      class="flex flex-col items-center justify-center bg-radio-500 text-radio-100 py-4"
+    >
+      <p>© 2023 JustAnotherHeroRiding</p>
       <span
         >This is a redesign for fun made by
-        <a href="https://github.com/JustAnotherHeroRiding"> Kristijan</a> and is
-        not meant to represent Radioshack in any way.</span
+        <a
+          href="https://github.com/JustAnotherHeroRiding"
+          class="text-radio-100 underline"
+        >
+          Kristijan</a
+        >
+        and is not meant to represent Radioshack in any way.</span
       >
     </footer>
   </body>
