@@ -1,5 +1,5 @@
 - [Practice Problems](https://cs50.harvard.edu/x/2023/problems/7/) #DONE 
-- [Lab 7](https://cs50.harvard.edu/x/2023/labs/7/) 
+- [Lab 7](https://cs50.harvard.edu/x/2023/labs/7/) #DONE 
 - [Problem Set 7](https://cs50.harvard.edu/x/2023/psets/7/)
 - [Lesson Timestamp](https://youtu.be/hysukrNKZs8?t=5163) #DONE
 - [Notes](https://cs50.harvard.edu/x/2023/notes/7/)

@@ -1,0 +1,26 @@
+If songs.db contains the top 100 songs of one listener from 2018, how would you characterize their audio aura?
+SELECT AVG(energy), AVG(valence), AVG(danceability) FROM songs; 
+This will return the values for the top 100 songs
+    energy      valence        danceability
+| 0.65906     | 0.484443     | 0.71646           |
+These are the average values from the top 100 songs
+From the six auras i would pick Blue and Orange.
+Because of the low valence, our listener likes to get in touch with his feelings
+However he still wants to dance to them and be energetic
+
+Hypothesize about why the way you’ve calculated this aura might not be very representative of the listener. 
+What better ways of calculating this aura would you propose?
+These are only some of the charactistics of the top 100 songs
+
+These are the results for the averages for all columns
+
+| AVG(energy) | AVG(valence) | AVG(danceability) | AVG(loudness) | AVG(speechiness) | AVG(tempo) | AVG(duration_ms) |
++-------------+--------------+-------------------+---------------+------------------+------------+------------------+
+| 0.65906     | 0.484443     | 0.71646           | -5.67764      | 0.115569         | 119.90418  | 205206.78        |
+
+Here we can see that our user likes danceable tracks, not so much talking with a moderate tempo of 119 bpm
+Most likely a steady and heavy drum beat that is not too fast
+Songs tend to be on the sadder side but still energetic
+I would still go with Orange due to the short song length and high danceability
+Perhaps I would lean more with purple than blue as the songs are less in the sad realm
+and more into songs that move us in everyday life and help us persist.
