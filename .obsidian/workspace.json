@@ -8,31 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "fcfcbb4975655400",
+            "id": "74456f23e47c194a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lesson 7 - SQL/SQL Notes.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "461626ac240e8cf1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Lesson 7 - SQL/SQL Notes.md",
+                "file": "Lesson 8 - HTML, CSS, JavaScript/Lesson 8 Notes.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Lesson 7 - SQL/SQL Notes.md",
+                "file": "Lesson 8 - HTML, CSS, JavaScript/Lesson 8 Notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Lesson 7 - SQL/SQL Notes.md",
+                "file": "Lesson 8 - HTML, CSS, JavaScript/Lesson 8 Notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Lesson 7 - SQL/SQL Notes.md"
+                "file": "Lesson 8 - HTML, CSS, JavaScript/Lesson 8 Notes.md"
               }
             }
           }
@@ -159,53 +146,53 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "461626ac240e8cf1",
+  "active": "74456f23e47c194a",
   "lastOpenFiles": [
-    "Lesson 7 - SQL/Pset7/fiftyville/fiftyville.db",
-    "Lesson 7 - SQL/Pset7/fiftyville/answers.txt",
-    "Lesson 7 - SQL/Pset7/fiftyville/log.sql",
-    "Lesson 7 - SQL/Pset7/fiftyville",
-    "Lesson 7 - SQL/Pset7/fiftyville.zip",
-    "Lesson 7 - SQL/Pset7/movies/movies.py",
-    "Lesson 7 - SQL/Pset7/movies/movies.db",
-    "Lesson 7 - SQL/Pset7/movies/LICENSE",
-    "Lesson 7 - SQL/Pset7/movies/7.sql",
-    "Lesson 7 - SQL/Pset7/movies/9.sql",
-    "Lesson 7 - SQL/Pset7/movies/8.sql",
-    "Lesson 7 - SQL/Songs Lab 7.md",
-    "Lesson 7 - SQL/SQL Notes.md",
-    "Final Project/Ideas.md",
-    "Lesson 6 - Python/python.md",
-    "React Use C/react-use-c/README.md",
-    "Lesson 5 - Data Structures/Lesson 5 Notes.md",
-    "Lesson 4 - Memory/Lesson 4 - Notes.md",
-    "Lesson 4 - Memory/pSet4/recover/049.jpg",
-    "Lesson 4 - Memory/pSet4/recover/048.jpg",
-    "Lesson 4 - Memory/pSet4/recover/047.jpg",
-    "Lesson 4 - Memory/pSet4/recover/046.jpg",
-    "Lesson 4 - Memory/pSet4/recover/045.jpg",
-    "Lesson 4 - Memory/pSet4/recover/044.jpg",
-    "Lesson 4 - Memory/pSet4/recover/043.jpg",
-    "Lesson 4 - Memory/pSet4/recover/042.jpg",
-    "Lesson 4 - Memory/pSet4/recover/041.jpg",
-    "Lesson 4 - Memory/pSet4/recover/040.jpg",
-    "Lesson 3 - Algorithms/Lesson 3 - Algorithms Notes.md",
-    "Lesson 3 - Algorithms/Problem Set 3/Tideman.md",
-    "Lesson 3 - Algorithms/Practice Problems/snackbar/README.md",
-    "GUI Experiment/Nuklear_Tutorial/README.md",
-    "README.md",
-    "GUI Experiment/Nuklear/src/Readme.md",
-    "GUI Experiment/Nuklear/demo/sfml_opengl3/Readme.md",
-    "GUI Experiment/Nuklear/demo/sfml_opengl2/Readme.md",
-    "GUI Experiment/Nuklear/demo/sdl_opengles2/Readme.md",
-    "GUI Experiment/Nuklear/demo/allegro5/Readme.md",
-    "GUI Experiment/Nuklear/Readme.md",
-    "Lesson 2 - Arrays/Lesson 2 - Arrays Notes.md",
-    "libcs50-11.0.2/README.md",
-    "libcs50-11.0.2 copy/README.md",
-    "Lesson 2 - Arrays/libcs50-11.0.2 copy/README.md",
-    "Lesson 2 - Arrays/libcs50-11.0.2/README.md",
-    "Lesson 1 - C/libcs50-11.0.2/README.md",
-    "Lesson 1 - C/Lesson 1 C Notes.md"
+    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/radiotoday/node_modules/@jridgewell/set-array/src/set-array.ts",
+    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/radiotoday/node_modules/@jridgewell/set-array/src",
+    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/radiotoday/node_modules/@jridgewell/resolve-uri/dist/types/resolve-uri.d.ts",
+    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/radiotoday/node_modules/@jridgewell/resolve-uri/dist/resolve-uri.umd.js.map",
+    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/radiotoday/node_modules/@jridgewell/resolve-uri/dist/resolve-uri.umd.js",
+    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/radiotoday/node_modules/@jridgewell/resolve-uri/dist/resolve-uri.mjs.map",
+    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/radiotoday/node_modules/@jridgewell/resolve-uri/dist/types",
+    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/radiotoday/node_modules/@jridgewell/resolve-uri/dist/resolve-uri.mjs",
+    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/radiotoday/node_modules/@jridgewell/resolve-uri/dist",
+    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/radiotoday/package-lock.json",
+    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/radiotoday/node_modules/tailwindcss/scripts/type-utils.js",
+    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/radiotoday/node_modules/yaml/README.md",
+    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/radiotoday/node_modules/sucrase/README.md",
+    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/radiotoday/node_modules/tailwindcss/src/postcss-plugins/nesting/README.md",
+    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/radiotoday/node_modules/tailwindcss/src/value-parser/README.md",
+    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/radiotoday/node_modules/nanoid/README.md",
+    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/radiotoday/node_modules/didyoumean/README.md",
+    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/radiotoday/node_modules/tailwindcss/lib/postcss-plugins/nesting/README.md",
+    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/radiotoday/node_modules/tailwindcss/lib/value-parser/README.md",
+    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/radiotoday/node_modules/normalize-path/README.md",
+    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/radiotoday/node_modules/is-core-module/README.md",
+    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/radiotoday/node_modules/mz/HISTORY.md",
+    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/radiotoday/node_modules/is-core-module/CHANGELOG.md",
+    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/radiotoday/node_modules/@nodelib/fs.walk/README.md",
+    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/radiotoday/node_modules/glob/README.md",
+    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/radiotoday/node_modules/pify/readme.md",
+    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/radiotoday/node_modules/@nodelib/fs.stat/README.md",
+    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/radiotoday/node_modules/ts-interface-checker/README.md",
+    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/radiotoday/node_modules/hasown/README.md",
+    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/radiotoday/node_modules/pirates/README.md",
+    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/radiotoday/node_modules/path-parse/README.md",
+    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/radiotoday/node_modules/thenify/History.md",
+    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/radiotoday/node_modules/inherits/README.md",
+    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/radiotoday/node_modules/minimatch/README.md",
+    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/radiotoday/node_modules/thenify-all/README.md",
+    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/radiotoday/node_modules/fill-range/README.md",
+    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/spinningR.gif",
+    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/radio1996/big_rgrey1.gif",
+    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/radio1996/rsfetur2.gif",
+    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/radio1996/longall.gif",
+    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/radio1996/mclogo.gif",
+    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/radio1997/cellular.gif",
+    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/radio1997/repair_logo.gif",
+    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/radio1997/1_dots.gif",
+    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/radio1997/storelocator_logo.gif",
+    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/radio1997/family_radio.gif"
   ]
 }
