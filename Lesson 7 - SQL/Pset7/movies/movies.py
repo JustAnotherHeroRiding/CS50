@@ -32,9 +32,10 @@ db = SQL("sqlite:///movies.db")
 
 # In 5.sql, write a SQL query to list the titles and release years of all Harry Potter movies, in chronological order.
 # Your query should output a table with two columns, one for the title of each movie and one for the release year of each movie.
-# You may assume that the title of all Harry Potter movies will begin with the words “Harry Potter”, and that if a movie title begins with the words “Harry Potter”, it is a Harry Potter movie.
+# You may assume that the title of all Harry Potter movies will begin with the words “Harry Potter”,
+# and that if a movie title begins with the words “Harry Potter”, it is a Harry Potter movie.
 #
-
+harryPotter = db.execute("SELECT title, year FROM movies WHERE title LIKE 'Harry Potter%'")
 #
 # In 6.sql, write a SQL query to determine the average rating of all movies released in 2012.
 # Your query should output a table with a single column and a single row (not counting the header) containing the average rating.
@@ -109,4 +110,6 @@ db = SQL("sqlite:///movies.db")
 # the first select statement will select names from people
 # these people must be part of the stars whose movie_id is part of the movies where kevin bacon's id is in
 
-
+baconCoStars = db.execute(
+    "SELECT name FROM people WHERE name != 'Kevin Bacon' AND id IN (SELECT person_id FROM stars WHERE movie_id IN (SELECT id FROM movies WHERE id IN (SELECT movie_id FROM stars WHERE person_id IN (SELECT id FROM people WHERE name = 'Kevin Bacon' AND birth = 1958))));"
+)
