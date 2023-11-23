@@ -6,10 +6,9 @@
     <title>Tailwind Radioshack</title>
     <link rel="stylesheet" href="../dist/output.css" />
   </head>
-  <body class="relative">
+  <body class="relative flex flex-col">
     <nav
-      class="bg-radio-100 h-16 w-full absolute top-0 flex items-center
-       justify-start font-sans text-radio-500 text-[1em] leading-none gap-4 py-10"
+      class="bg-radio-100 h-16 w-full sticky top-0 flex items-center justify-start font-sans text-radio-500 text-[1em] leading-none gap-4 py-10"
     >
       <img
         src="../radioshack-logo.png"
@@ -23,5 +22,37 @@
       <p class="flex flex-col"><span>About</span> Radioshack</p>
       <p class="flex flex-col"><span>Product</span> Support</p>
     </nav>
+
+    <header>
+      <!-- Animated background section with a looping video, however i will use a cool animation instead of the
+      flashing video currently used, I want it to be more low key and react to mouse hover -->
+    </header>
+    <section class="bg-radio-100 mt-auto flex flex-col items-center py-8 text-radio-400 gap-8">
+      <h1>We're here for you, let us know how we can help you</h1>
+      <div class="flex flex-row gap-8">
+        <p>customerservice@radioshack.com</p>
+        <p>+1 (833) 208-1176</p>
+      </div>
+      <h2>Be part of our family, please contact us:</h2>
+      <div class="flex flex-row gap-8">
+        <p>Dealer</p>
+        <p>Vendor</p>
+        <p>Customer</p>
+      </div>
+      <img
+        src="../radioshack-logo.png"
+        alt=""
+        class="w-36 h-auto mx-8 bg-radio-500 px-4 py-2 rounded-md"
+      />
+      <!-- A footer with contact info and a number -->
+    </section>
+    <footer class="flex flex-col items-center justify-center">
+      <p>© 2023 RadioShack</p>
+      <span
+        >This is a redesign for fun made by
+        <a href="https://github.com/JustAnotherHeroRiding"> Kristijan</a> and is
+        not meant to represent Radioshack in any way.</span
+      >
+    </footer>
   </body>
 </html>
