@@ -38,7 +38,7 @@
 
     <header
       id="heroHeader"
-      class="flex header bg-[url('../images/circuit.png')] bg-cover bg-center justify-center items-center min-h-[40vh] relative overflow-hidden"
+      class="flex header bg-[url('../images/circuit.png')] bg-cover bg-center justify-center items-center min-h-[60vh] relative overflow-hidden"
     >
       <h1
         class="text-[4rem] font-bold shadow-sm shadow-radio-200 text-center z-[2] text-radio-500 border border-radio-500 bg-radio-300 p-4 rounded-lg"
@@ -49,14 +49,20 @@
       <!-- Container for the p5.js canvas -->
     </header>
     <section
-      class="bg-radio-100 px-4 mt-auto h-fit flex flex-row justify-center items-center py-8 text-radio-500 gap-8"
+      class="bg-radio-100 px-4 mt-auto flex md:flex-row flex-col justify-center items-stretch py-8 text-radio-500 gap-8"
     >
-      <div class="w-1/2 bg-cover bg-center bg-[url('../images/Store.png')]">
-        <h1 class="h-full text-center gap-4 flex flex-col text-6xl font-serif">
+      <div
+        class="flex md:w-1/2 rounded-md w-full bg-cover bg-center bg-[url('../images/Store.png')] flex-col items-center justify-center"
+      >
+        <h1
+          class="text-center text-6xl flex flex-col font-serif border bg-radio-300 p-4 rounded-md shadow-md shadow-radio-200 w-fit"
+        >
           Our <span>Story</span>
         </h1>
       </div>
-      <div class="w-1/2 p-4 border rounded-xl shadow-md shadow-radio-300">
+      <div
+        class="md:w-1/2 w-full p-4 bg-black border rounded-xl shadow-md shadow-radio-300"
+      >
         <img
           src="../images/radioshack-logo.png"
           alt="logo"
@@ -85,6 +91,28 @@
       </div>
     </section>
     <section
+      class="min-h-[50vh] bg-radio-100 px-4 mt-auto flex md:flex-row flex-col justify-center items-stretch py-8 text-radio-500 gap-8"
+    >
+      <div
+        class="flex flex-col w-full md:w-1/3 items-center justify-center break-words p-4"
+      >
+        <div class="mb-24 font-serif px-16">
+          <h2 class="text-radio-200 mb-4 text-5xl font-black">Our Team</h2>
+          <span class="leading-tight font-black text-4xl"
+            >“A company is only as good as the people it has”</span
+          >
+        </div>
+        <span class="px-16 mt-auto text-xl"
+          >We believe in the power of teamwork. We know that when we combine our
+          skills, knowledge and passion, we can achieve goals that seemed
+          unattainable.</span
+        >
+      </div>
+      <div
+        class="flex flex-col w-full min-h-[50vh] md:w-2/3 bg-[url('../images/cartoonyEmployees.png')] bg-contain bg-no-repeat bg-center"
+      ></div>
+    </section>
+    <section
       class="bg-radio-100 mt-auto flex flex-col items-center py-8 text-radio-400 gap-8"
     >
       <h1>We're here for you, let us know how we can help you</h1>
@@ -105,6 +133,7 @@
       />
       <!-- A footer with contact info and a number -->
     </section>
+
     <footer
       class="flex flex-col items-center justify-center bg-radio-500 text-radio-100 py-4"
     >
