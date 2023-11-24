@@ -5,4 +5,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
     .map((sentence) => sentence.trim() + ".<br><br>")
     .join(" ");
   paragraph.innerHTML = sentences;
+
+  document.getElementById("hamburger").addEventListener("click", function () {
+    var menu = document.getElementById("menuItems");
+    if (menu.classList.contains("hidden")) {
+      menu.classList.remove("hidden");
+    } else {
+      menu.classList.add("hidden");
+    }
+  });
 });
