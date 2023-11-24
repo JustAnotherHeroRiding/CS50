@@ -6,33 +6,42 @@
     <title>Tailwind Radioshack</title>
     <link rel="stylesheet" href="../dist/output.css" />
     <script defer src="main.js"></script>
-    <script
-      defer
-      src="https://cdn.jsdelivr.net/npm/p5@1.8.0/lib/p5.js"
-    ></script>
   </head>
   <body class="relative flex flex-col">
     <nav
       class="bg-radio-100 h-16 w-full sticky z-[3] top-0 flex items-center justify-start font-sans text-radio-500 text-[1em] leading-none gap-4 py-10 border-b shadow-sm shadow-radio-500"
     >
       <img
-        src="../radioshack-logo.png"
+        src="../images/radioshack-logo.png"
         alt="radioshack-logo"
         class="w-36 h-auto mx-8 bg-radio-500 px-4 py-2 rounded-md"
       />
-      <p class="flex flex-col"><span>Store</span> Locator</p>
-      <p class="flex flex-col"><span>Steve's</span> Workbench</p>
-      <p class="flex flex-col"><span>Radioshack</span> Services</p>
-      <p class="flex flex-col"><span>Electronic</span> Repair</p>
-      <p class="flex flex-col"><span>About</span> Radioshack</p>
-      <p class="flex flex-col"><span>Product</span> Support</p>
+      <p class="flex flex-col hover:underline cursor-pointer">
+        <span>Store</span> Locator
+      </p>
+      <p class="flex flex-col hover:underline cursor-pointer">
+        <span>Steve's</span> Workbench
+      </p>
+      <p class="flex flex-col hover:underline cursor-pointer">
+        <span>Radioshack</span> Services
+      </p>
+      <p class="flex flex-col hover:underline cursor-pointer">
+        <span>Electronic</span> Repair
+      </p>
+      <p class="flex flex-col hover:underline cursor-pointer">
+        <span>About</span> Radioshack
+      </p>
+      <p class="flex flex-col hover:underline cursor-pointer">
+        <span>Product</span> Support
+      </p>
     </nav>
 
     <header
-      class="flex header justify-center items-center min-h-[40vh] relative overflow-hidden"
+      id="heroHeader"
+      class="flex header bg-[url('../images/circuit.png')] bg-cover bg-center justify-center items-center min-h-[40vh] relative overflow-hidden"
     >
       <h1
-        class="text-[4rem] font-bold text-center z-[2] text-radio-500 border border-radio-400 bg-radio-100 p-4 rounded-lg"
+        class="text-[4rem] font-bold shadow-sm shadow-radio-200 text-center z-[2] text-radio-500 border border-radio-500 bg-radio-300 p-4 rounded-lg"
       >
         RadioShack
       </h1>
@@ -42,14 +51,14 @@
     <section
       class="bg-radio-100 px-4 mt-auto h-fit flex flex-row justify-center items-center py-8 text-radio-500 gap-8"
     >
-      <div class="w-1/2">
-        <h1 class="text-center gap-4 flex flex-col text-6xl font-serif">
+      <div class="w-1/2 bg-cover bg-center bg-[url('../images/Store.png')]">
+        <h1 class="h-full text-center gap-4 flex flex-col text-6xl font-serif">
           Our <span>Story</span>
         </h1>
       </div>
       <div class="w-1/2 p-4 border rounded-xl shadow-md shadow-radio-300">
         <img
-          src="../radioshack-logo.png"
+          src="../images/radioshack-logo.png"
           alt="logo"
           class="w-36 h-auto bg-radio-500 px-4 py-2 rounded-md mb-8"
         />
@@ -90,7 +99,7 @@
         <p>Customer</p>
       </div>
       <img
-        src="../radioshack-logo.png"
+        src="../images/radioshack-logo.png"
         alt=""
         class="w-36 h-auto mx-8 bg-radio-500 px-4 py-2 rounded-md"
       />
