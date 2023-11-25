@@ -78,7 +78,7 @@ class TriviaApi {
       .then((response) => response.json())
       .then((result) => {
         if (result.results && result.results.length > 0) {
-          return result.results[0];
+          return result.results;
         } else {
           return this.tryFetchQuestions(retryCount - 1);
         }
@@ -103,7 +103,7 @@ class TriviaApi {
   }
 }
 
-class ElementGetter {
+  class ElementGetter {
   static getElementById<T extends HTMLElement>(id: string): T {
     const element = document.getElementById(id);
     if (!element) throw new Error(`Element with id '${id}' not found`);
@@ -119,7 +119,7 @@ class QuestionEngine {
     this.api = new TriviaApi();
   }
 
-  async renderQuestion(divId: string, number?: number) {
+  renderQuestion(divId: string, question: Question) {
     const targetDiv = ElementGetter.getElementById<HTMLDivElement>(divId);
     if (!targetDiv) return;
     const childRowDiv = ImprovedElementCreator.createElement(ElementType.DIV, [
@@ -132,8 +132,7 @@ class QuestionEngine {
       "py-2",
       "gap-8",
     ]);
-    const question = await this.api.getQuestions(number ? number : 10);
-    console.log(question);
+
     if (divId === "multipleChoice") {
       this.renderMultipleChoice(question, childRowDiv, targetDiv);
     } else if (divId === "freeText") {
@@ -164,13 +163,27 @@ class QuestionEngine {
     targetDiv.appendChild(childRowDiv);
   }
 
-  start(page: string) {
+  async start(page: string, number?: number) {
     if (page === "home") {
-      //this.renderQuestion("multipleChoice", 1);
-      this.renderQuestion("freeText", 1);
+      const questions = await this.api.getQuestions(number ? number + 1 : 10) as Question[];
+  
+      if (questions.length > 1) {
+        // Render all but the last question as multiple choice
+        questions.slice(0, -1).forEach(question => {
+          this.renderQuestion("multipleChoice", question);
+        });
+        // Render the last question as free text
+        this.renderQuestion("freeText", questions[questions.length - 1]);
+      } else if (questions.length === 1) {
+        // If only one question is fetched, render it as needed
+        this.renderQuestion("multipleChoice", questions[0]); // or "freeText"
+      } else {
+        console.error("No questions fetched");
+      }
     }
   }
+  
 }
 
 const renderer = new QuestionEngine();
-renderer.start("home");
+renderer.start("home", 2);
