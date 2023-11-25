@@ -1,4 +1,32 @@
 "use strict";
+var ElementType;
+(function (ElementType) {
+    ElementType["DIV"] = "div";
+    ElementType["IMG"] = "img";
+})(ElementType || (ElementType = {}));
+class ImprovedElementCreator {
+    static createElement(elementType, classes, size, textContent) {
+        const element = document.createElement(elementType);
+        if (!classes) {
+            return element;
+        }
+        if (typeof classes === "string") {
+            element.classList.add(classes);
+        }
+        else {
+            element.classList.add(...classes);
+        }
+        if (size) {
+            const [width, height] = size;
+            element.style.width = `${width}px`;
+            element.style.height = `${height}px`;
+        }
+        if (textContent) {
+            element.textContent = textContent;
+        }
+        return element;
+    }
+}
 class TriviaApi {
     triviaUrl;
     amount;
@@ -59,14 +87,30 @@ class QuestionEngine {
         this.targetDiv = ElementGetter.getElementById(divId);
         if (!this.targetDiv)
             return;
+        const childRowDiv = ImprovedElementCreator.createElement(ElementType.DIV, [
+            "flex",
+            "flex-row",
+            "border",
+            "rounded-md",
+            "px-4",
+            "py-2",
+            "justify-between",
+        ]);
         const question = await this.api.getQuestions(number ? number : 10);
         console.log(question);
-        this.targetDiv.innerHTML += `<p>${question.question}</p><p>${question.correct_answer}</p>`;
+        this.targetDiv.innerHTML += `<p>${question.question}</p>`;
+        childRowDiv.innerHTML += `<button class="px-4 py-2 mx-4">${question.correct_answer}</button>`;
         question.incorrect_answers.forEach((answer) => {
-            this.targetDiv.innerHTML += `<p>${answer}</p>`;
+            childRowDiv.innerHTML += `<button class="px-4 py-2 mx-4">${answer}</button>`;
         });
+        this.targetDiv.appendChild(childRowDiv);
+    }
+    start(page) {
+        if (page === "home") {
+            this.renderQuestion("multipleChoice", 1);
+        }
     }
 }
 const renderer = new QuestionEngine();
-renderer.renderQuestion("multipleChoice", 1);
+//renderer.start("home");
 //# sourceMappingURL=main.js.map
