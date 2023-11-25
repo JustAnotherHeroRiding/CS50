@@ -6,27 +6,52 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
       rel="stylesheet"
     />
-    <link href="styles.css" rel="stylesheet" />
     <title>Trivia!</title>
-    <link rel="stylesheet" href="../dist/output.css">
+    <link rel="stylesheet" href="../dist/output.css" />
     <script defer src="../dist/main.js"></script>
+    <script
+      src="https://kit.fontawesome.com/1fad6e07b9.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- // TODO: Add code to check answers to questionss -->
   </head>
-  <body>
-    <div class="header">
-      <h1>Trivia!</h1>
+  <body class="flex flex-col font-sans">
+    <div
+      class="bg-trivia-300 sticky text-trivia-100 px-4 flex items-center justify-between h-16"
+    >
+      <div class="flex-1 text-start">
+        <a href="https://github.com/JustAnotherHeroRiding" target="_blank"
+          >JustAnotherHeroRiding</a
+        >
+        <i class="fa-brands fa-github logo"></i>
+      </div>
+      <h1
+        onclick="!window.location.href.endsWith('/index.html/') && window.history.back()"
+        class="flex-1 text-center text-trivia-400"
+      >
+        <span class="bg-trivia-100 text-3xl font-bold font-serif border p-2 rounded-lg"
+          >Trivial</span
+        >
+      </h1>
+      <div class="flex justify-end flex-1">
+        <a class="border p-1 rounded-md" href="expanded.html">
+          Expanded <span>Version</span>
+        </a>
+      </div>
     </div>
 
-    <div class="container">
-      <div class="section">
-        <h2 class="text-red-600">Part 1: Multiple Choice</h2>
-        <hr />
+    <div class="flex flex-col p-16 gap-16">
+      <div class="border p-4 border-black rounded-md">
+        <h2 class="text-3xl">Part 1: Multiple Choice</h2>
+        <hr class="border border-trivia-300" />
+        <div id="multipleChoice"></div>
         <!-- TODO: Add multiple choice question here -->
       </div>
 
-      <div class="section">
-        <h2>Part 2: Free Response</h2>
-        <hr />
+      <div class="border p-4 border-black rounded-md">
+        <h2 class="text-3xl">Part 2: Free Response</h2>
+        <hr class="border border-trivia-300" />
+        <div id="freeText"></div>
         <!-- TODO: Add free response question here -->
       </div>
     </div>
