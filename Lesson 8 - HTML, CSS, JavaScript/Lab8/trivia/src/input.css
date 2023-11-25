@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+/* :root {
+  --sans: "Soehne", system-ui, -apple-system, Helvetica Neue, Arial, sans-serif;
+  --serif: "Signifier", ui-serif, Georgia, Cambria, Times New Roman, Times,
+    serif;
+  --mono: "Soehne Mono Buch", Courier, monospace;
+}
+ */
+/* Soehne - Regular */
+@font-face {
+  font-family: "Soehne";
+  src: url("../src/Fonts/SoehneFull/Sohne-Buch.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Soehne - Italic */
+@font-face {
+  font-family: "Soehne";
+  src: url("../src/Fonts/SoehneFull/Sohne-BuchKursiv.otf") format("opentype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* Soehne - Bold */
+@font-face {
+  font-family: "Soehne";
+  src: url("../src/Fonts/SoehneFull/Sohne-Fett.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Soehne - Bold Italic */
+@font-face {
+  font-family: "Soehne";
+  src: url("../src/Fonts/SoehneFull/Sohne-FettKursiv.otf") format("opentype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* Signifier - Regular */
+@font-face {
+  font-family: "Signifier";
+  src: url("../src/Fonts/TestSignifier-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Soehne Mono Buch - Regular */
+@font-face {
+  font-family: "Soehne Mono Buch";
+  src: url("../src/Fonts/SoehneMono/SohneMono-Buch.otf") format("opentype");
+  font-weight: 400;
+  font-style: 400;
+}
