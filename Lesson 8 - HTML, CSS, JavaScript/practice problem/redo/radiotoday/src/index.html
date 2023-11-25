@@ -76,58 +76,96 @@
 
     <header
       id="heroHeader"
-      class="flex header bg-[url('../images/circuit.png')] bg-cover bg-center justify-center items-center min-h-[60vh] relative overflow-hidden"
-    >
-      <h1
-        class="text-[4rem] font-bold shadow-sm shadow-radio-200 text-center z-[2] text-radio-500 border border-radio-500 bg-radio-300 p-4 rounded-lg"
-      >
-        RadioShack
-      </h1>
-      <div class="absolute top-0 left-0 w-full h-full" id="p5-canvas"></div>
-      <!-- Container for the p5.js canvas -->
-    </header>
-    <section
-      class="bg-radio-100 px-4 mt-auto flex md:flex-row flex-col justify-center items-stretch py-8 text-radio-500 gap-8"
+      class="flex flex-col header bg-[url('../images/circuit.png')] bg-cover bg-center justify-center items-center min-h-[60vh] relative overflow-hidden"
     >
       <div
-        class="flex md:w-1/2 rounded-lg w-full bg-cover bg-center bg-[url('../images/Store.png')] flex-col items-center justify-center"
+        class="flex flex-col gap-8 font-bold shadow-sm my-16 shadow-radio-200 text-center z-[2] text-white border border-radio-500 bg-radio-600 p-4 rounded-lg md:w-1/2"
       >
-        <h1
-          class="text-center font-bold text-6xl flex flex-col font-serif border bg-radio-300 p-4 rounded-md shadow-md shadow-radio-200 w-fit"
+        <div class="flex flex-col">
+          <h1 class="text-[4rem] font-serif font-bold">RadioShack</h1>
+          <p class="text-[2.5rem] text-slate-200">
+            Connecting You to the Future
+          </p>
+          <p class="text-[2.5rem] text-slate-200">
+            Where Imagination Meets Innovation
+          </p>
+        </div>
+        <div class="flex justify-center gap-8">
+          <button
+            class="px-4 py-2 bg-radio-500 text-radio-600 rounded-md hover:bg-radio-400"
+          >
+            Featured
+          </button>
+          <button
+            type="button"
+            class="sm:flex items-center w-72 text-left space-x-3 px-4 h-12 
+            bg-white ring-1 ring-slate-900/10 hover:ring-slate-300 
+            focus:outline-none focus:ring-2 focus:ring-sky-500 shadow-sm rounded-lg text-slate-400
+             dark:bg-slate-800 dark:ring-0 dark:text-slate-300 dark:highlight-white/5 dark:hover:bg-slate-700
+             border"
+          >
+            <svg
+              width="24"
+              height="24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="flex-none text-slate-300 dark:text-slate-400"
+              aria-hidden="true"
+            >
+              <path d="m19 19-3.5-3.5"></path>
+              <circle cx="11" cy="11" r="6"></circle>
+            </svg>
+            <span class="flex-auto">Product search...</span>
+          </button>
+        </div>
+      </div>
+      <section
+        class="px-4 mt-auto flex flex-col justify-center items-center py-8 text-radio-500 gap-8"
+      >
+        <div
+          class="flex md:w-fit mx-auto rounded-lg p-4 w-full flex-col items-center justify-center border bg-radio-300 shadow-radio-200"
         >
-          Our <span>Story</span>
-        </h1>
-      </div>
-      <div
-        class="md:w-1/2 w-full p-4 bg-black border rounded-xl shadow-md shadow-radio-300"
-      >
-        <img
-          src="../images/radioshack-logo.png"
-          alt="logo"
-          class="w-36 h-auto bg-radio-500 px-4 py-2 rounded-md mb-8"
-        />
-        <p class="break-after-period pr-16">
-          RadioShack is an American chain of consumer electronics stores since
-          1921. In 1998 it began operations with Unicomer Group in Central
-          America as a North American style store selling technology products
-          and accessories. In 2015, Unicomer Group acquired RadioShack
-          International Brand, Intellectual Property and Franchise rights for
-          Central America, South America, and the Caribbean. In 2023, Unicomer
-          Group acquired RadioShack's intellectual property assets and domains
-          in about 70 countries around the world, including: the United States,
-          Canada, Europe, and China; and aims to manage the business of
-          technology products with excellence, generating long-term profitable
-          relationships with our partners. This acquisition consolidates
-          Unicomer Group as the majority owner of the brand worldwide, leading
-          the technology market and expanding its value offer for its clients.
-          We want to continue developing the business, in as many territories as
-          possible, creating support plans for operations, reaching our
-          customers with our broad portfolio of products, looking for the best
-          prices and constant innovation to provide solutions to technological
-          problems. “A company is only as good as the people it has“
-        </p>
-      </div>
-    </section>
+          <img
+            src="../images/radioshack-logo.png"
+            alt="logo"
+            class="w-36 h-auto bg-radio-500 px-4 py-2 rounded-md mb-8"
+          />
+          <h1
+            class="text-center font-bold text-6xl flex flex-col font-serif text-white"
+          >
+            Our <span>Story</span>
+          </h1>
+        </div>
+        <div
+          class="md:w-1/2 w-full p-4 bg-black border rounded-xl shadow-md shadow-radio-300"
+        >
+          <p class="break-after-period pr-16">
+            RadioShack is an American chain of consumer electronics stores since
+            1921. In 1998 it began operations with Unicomer Group in Central
+            America as a North American style store selling technology products
+            and accessories. In 2015, Unicomer Group acquired RadioShack
+            International Brand, Intellectual Property and Franchise rights for
+            Central America, South America, and the Caribbean. In 2023, Unicomer
+            Group acquired RadioShack's intellectual property assets and domains
+            in about 70 countries around the world, including: the United
+            States, Canada, Europe, and China; and aims to manage the business
+            of technology products with excellence, generating long-term
+            profitable relationships with our partners. This acquisition
+            consolidates Unicomer Group as the majority owner of the brand
+            worldwide, leading the technology market and expanding its value
+            offer for its clients. We want to continue developing the business,
+            in as many territories as possible, creating support plans for
+            operations, reaching our customers with our broad portfolio of
+            products, looking for the best prices and constant innovation to
+            provide solutions to technological problems. “A company is only as
+            good as the people it has“
+          </p>
+        </div>
+      </section>
+    </header>
     <section
       class="min-h-[50vh] bg-radio-100 px-4 mt-auto flex md:flex-row flex-col justify-center items-stretch py-8 text-radio-500 gap-8"
     >

@@ -4,10 +4,25 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"Soehne"', 'system-ui', '-apple-system', 'Helvetica Neue', 'Arial', 'sans-serif'],
+        sans: [
+          '"Soehne"',
+          "system-ui",
+          "-apple-system",
+          "Helvetica Neue",
+          "Arial",
+          "sans-serif",
+        ],
         // circle: ['"Soehne Circle"', 'sans-serif'],
-        serif: ['"Signifier"', 'ui-serif', 'Georgia', 'Cambria', 'Times New Roman', 'Times', 'serif'],
-        mono: ['"Soehne Mono Buch"', 'Courier', 'monospace']
+        serif: [
+          '"Signifier"',
+          "ui-serif",
+          "Georgia",
+          "Cambria",
+          "Times New Roman",
+          "Times",
+          "serif",
+        ],
+        mono: ['"Soehne Mono Buch"', "Courier", "monospace"],
       },
       colors: {
         radio: {
@@ -16,6 +31,7 @@ module.exports = {
           300: "#f77f00",
           400: "#fcbf49",
           500: "#eae2b7",
+          600: "#1d1f20",
         },
       },
     },
