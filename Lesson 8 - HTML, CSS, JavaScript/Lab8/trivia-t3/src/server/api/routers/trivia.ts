@@ -1,7 +1,7 @@
 import { z } from "zod";
-import { type Question } from "@prisma/client";
-
 import { createTRPCRouter, publicProcedure } from "~/server/api/trpc";
+import { type QuestionSingle } from "~/app/_components/questionCard";
+
 const url = "https://the-trivia-api.com/v2/questions";
 
 export const triviaRouter = createTRPCRouter({
@@ -30,7 +30,7 @@ export const triviaRouter = createTRPCRouter({
         language: z.string().optional(),
       }),
     )
-    .query(({ input }) => {
+    .query(async ({ input }) => {
       // Convert all input fields to strings
       const inputAsString = Object.fromEntries(
         Object.entries(input).map(([key, value]) => [key, String(value)]),
@@ -40,18 +40,19 @@ export const triviaRouter = createTRPCRouter({
       const queryParams = new URLSearchParams(inputAsString).toString();
       const requestUrl = `${url}?${queryParams}`;
 
-      return fetch(requestUrl, {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      })
-        .then((res) => res.json())
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-return
-        .then((data) => data as Question[]) // Explicitly type the data as Question[]
-        .catch((err) => {
-          console.log(err);
-          throw new Error("Error fetching trivia questions");
+      try {
+        const response = await fetch(requestUrl, {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
         });
+        const data = (await response.json()) as QuestionSingle[]; // Use await here
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-return
+        return data; // Return the typed data
+      } catch (err) {
+        console.log(err);
+        throw new Error("Error fetching trivia questions");
+      }
     }), // Closing brace for getQuestions procedure
 }); // Closing brace for createTRPCRouter
