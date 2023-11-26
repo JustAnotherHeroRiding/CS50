@@ -156,7 +156,7 @@ class QuestionEngine {
         targetDiv.appendChild(childRowDiv);
     }
     checkAnswer(question, answer, source, type) {
-        if (type.toLowerCase() === "multipleChoice") {
+        if (type === "multipleChoice") {
             if (question.correct_answer === answer) {
                 source.classList.toggle("bg-green-600");
                 const correct = ImprovedElementCreator.createElement(ElementType.P, ["text-green-600", "text-2xl"], undefined, "correct");

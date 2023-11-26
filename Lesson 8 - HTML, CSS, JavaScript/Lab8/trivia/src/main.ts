@@ -209,7 +209,7 @@ class QuestionEngine {
     source: HTMLButtonElement,
     type: string
   ) {
-    if (type.toLowerCase() === "multipleChoice") {
+    if (type === "multipleChoice") {
       if (question.correct_answer === answer) {
         source.classList.toggle("bg-green-600");
         const correct = ImprovedElementCreator.createElement(
