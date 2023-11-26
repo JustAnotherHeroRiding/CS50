@@ -1,6 +1,23 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{html,js}"],
+  safelist: [
+    "bg-trivia-200",
+    "text-trivia-400",
+    "bg-red-600",
+    "bg-green-600",
+    "w-1/2",
+    "w-1/3",
+    "border",
+    "border-black",
+    "rounded-md",
+    "px-4",
+    "py-2",
+    "text-red-600",
+    "text-green-600",
+    "text-2xl",
+    "my-4"
+  ],
   theme: {
     extend: {
       fontFamily: {
