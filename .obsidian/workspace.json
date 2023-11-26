@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "74456f23e47c194a",
+            "id": "cef2a21cf556d8bd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lesson 8 - HTML, CSS, JavaScript/Lesson 8 Notes.md",
+                "file": "Lesson 8 - HTML, CSS, JavaScript/Trivia game T3.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Lesson 8 - HTML, CSS, JavaScript/Lesson 8 Notes.md",
+                "file": "Lesson 8 - HTML, CSS, JavaScript/Trivia game T3.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Lesson 8 - HTML, CSS, JavaScript/Lesson 8 Notes.md",
+                "file": "Lesson 8 - HTML, CSS, JavaScript/Trivia game T3.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Lesson 8 - HTML, CSS, JavaScript/Lesson 8 Notes.md"
+                "file": "Lesson 8 - HTML, CSS, JavaScript/Trivia game T3.md"
               }
             }
           }
@@ -146,53 +146,53 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "74456f23e47c194a",
+  "active": "cef2a21cf556d8bd",
   "lastOpenFiles": [
-    "Lesson 8 - HTML, CSS, JavaScript/Lab8/trivia/src/styles.css",
-    "index.exe",
-    "Lesson 8 - HTML, CSS, JavaScript/Lab8/trivia/src/Fonts/TestSignifier-Regular.otf",
-    "Lesson 8 - HTML, CSS, JavaScript/Lab8/trivia/src/expanded.html",
-    "Lesson 8 - HTML, CSS, JavaScript/Lab8/trivia/dist/output.css",
-    "Lesson 8 - HTML, CSS, JavaScript/Lab8/trivia/src/Fonts/SoehneMono/SohneMono-LeichtKursiv.otf",
-    "Lesson 8 - HTML, CSS, JavaScript/Lab8/trivia/src/Fonts/SoehneMono/SohneMono-Leicht.otf",
-    "Lesson 8 - HTML, CSS, JavaScript/Lab8/trivia/src/Fonts/SoehneMono/SohneMono-KraftigKursiv.otf",
-    "Lesson 8 - HTML, CSS, JavaScript/Lab8/trivia/src/Fonts/SoehneMono/SohneMono-Kraftig.otf",
-    "Lesson 8 - HTML, CSS, JavaScript/Lab8/trivia/src/Fonts/SoehneMono/SohneMono-HalbfettKursiv.otf",
-    "Lesson 8 - HTML, CSS, JavaScript/Lab8/trivia/src/Fonts/SoehneMono/SohneMono-Halbfett.otf",
-    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/radiotoday/Images/headphones.jpg",
-    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/radiotoday/Images/aiPhone.png",
-    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/radiotoday/Images/tomasz-gawlowski-YDZPdqv3FcA-unsplash.jpg",
-    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/radiotoday/Images/DALL·E 2023-11-24 19.00.11 - Create an ultra-realistic image showcasing a single electronic product found in a RadioShack store, such as a high-tech smartphone. The smartphone sho.png",
-    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/radiotoday/Images/products.png",
-    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/radiotoday/Images/DALL·E 2023-11-24 18.55.19 - Create a wide, ultra-realistic image displaying a selection of products typically found in a RadioShack store. The image should feature various electr.png",
-    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/radiotoday/Images/radioshack-countries-data.jpg",
-    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/radiotoday/Images/wide-store-interior.png",
-    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/radiotoday/Images/DALL·E 2023-11-24 18.46.36 - Create an ultra-realistic, wide image of the interior of a RadioShack store. The image should depict a modern, clean, and well-organized retail space .png",
-    "Lesson 8 - HTML, CSS, JavaScript/practice problem/redo/radiotoday/Images/customer-interaction.png",
-    "LE73B6~1/PRACTI~1/redo/radiotoday/node_modules/tailwindcss/src/postcss-plugins/nesting/README.md",
-    "LE73B6~1/PRACTI~1/redo/radiotoday/node_modules/tailwindcss/lib/postcss-plugins/nesting/README.md",
-    "LE73B6~1/PRACTI~1/redo/radiotoday/node_modules/tailwindcss/src/value-parser/README.md",
-    "LE73B6~1/PRACTI~1/redo/radiotoday/node_modules/tailwindcss/lib/value-parser/README.md",
-    "LE73B6~1/PRACTI~1/redo/radiotoday/node_modules/postcss-load-config/node_modules/lilconfig/readme.md",
-    "LE73B6~1/PRACTI~1/redo/radiotoday/node_modules/fast-glob/node_modules/glob-parent/README.md",
-    "LE73B6~1/PRACTI~1/redo/radiotoday/node_modules/fast-glob/node_modules/glob-parent/CHANGELOG.md",
-    "LE73B6~1/PRACTI~1/redo/radiotoday/node_modules/chokidar/node_modules/glob-parent/README.md",
-    "LE73B6~1/PRACTI~1/redo/radiotoday/node_modules/chokidar/node_modules/glob-parent/CHANGELOG.md",
-    "LE73B6~1/PRACTI~1/redo/radiotoday/node_modules/@nodelib/fs.walk/README.md",
-    "LE73B6~1/PRACTI~1/redo/radiotoday/node_modules/@nodelib/fs.stat/README.md",
-    "LE73B6~1/PRACTI~1/redo/radiotoday/node_modules/@nodelib/fs.scandir/README.md",
-    "LE73B6~1/PRACTI~1/redo/radiotoday/node_modules/@jridgewell/trace-mapping/README.md",
-    "LE73B6~1/PRACTI~1/redo/radiotoday/node_modules/@jridgewell/sourcemap-codec/README.md",
-    "LE73B6~1/PRACTI~1/redo/radiotoday/node_modules/@jridgewell/set-array/README.md",
-    "LE73B6~1/PRACTI~1/redo/radiotoday/node_modules/@jridgewell/resolve-uri/README.md",
-    "LE73B6~1/PRACTI~1/redo/radiotoday/node_modules/@jridgewell/gen-mapping/README.md",
-    "LE73B6~1/PRACTI~1/redo/radiotoday/node_modules/@alloc/quick-lru/readme.md",
-    "LE73B6~1/PRACTI~1/redo/radiotoday/node_modules/wrappy/README.md",
-    "LE73B6~1/PRACTI~1/redo/radiotoday/node_modules/yaml/README.md",
-    "LE73B6~1/PRACTI~1/redo/radiotoday/node_modules/util-deprecate/README.md",
-    "LE73B6~1/PRACTI~1/redo/radiotoday/node_modules/util-deprecate/History.md",
-    "LE73B6~1/PRACTI~1/redo/radiotoday/node_modules/ts-interface-checker/README.md",
-    "LE73B6~1/PRACTI~1/redo/radiotoday/node_modules/to-regex-range/README.md",
-    "LE73B6~1/PRACTI~1/redo/radiotoday/node_modules/thenify-all/README.md"
+    "trivia.exe",
+    "Lesson 8 - HTML, CSS, JavaScript/Lab8/trivia-t3/src/server/api/routers/trivia.ts",
+    "Lesson 8 - HTML, CSS, JavaScript/Lab8/trivia-t3/prisma/db.sqlite-journal",
+    "Lesson 8 - HTML, CSS, JavaScript/Lab8/trivia-t3/tailwind.config.ts",
+    "Lesson 8 - HTML, CSS, JavaScript/Lab8/trivia-t3/public/Fonts/SoehneMono/SohneMono-LeichtKursiv.otf",
+    "Lesson 8 - HTML, CSS, JavaScript/Lab8/trivia-t3/public/Fonts/SoehneMono/SohneMono-Leicht.otf",
+    "Lesson 8 - HTML, CSS, JavaScript/Lab8/trivia-t3/public/Fonts/SoehneMono/SohneMono-KraftigKursiv.otf",
+    "Lesson 8 - HTML, CSS, JavaScript/Lab8/trivia-t3/public/Fonts/SoehneMono/SohneMono-Kraftig.otf",
+    "Lesson 8 - HTML, CSS, JavaScript/Lab8/trivia-t3/public/Fonts/SoehneMono/SohneMono-HalbfettKursiv.otf",
+    "Lesson 8 - HTML, CSS, JavaScript/Lab8/trivia-t3/public/Fonts/SoehneMono/SohneMono-Halbfett.otf",
+    "Lesson 8 - HTML, CSS, JavaScript/Lab8/trivia-t3/public/Fonts/SoehneMono/SohneMono-FettKursiv.otf",
+    "Lesson 8 - HTML, CSS, JavaScript/Lab8/trivia-t3/node_modules/pirates/README.md",
+    "Lesson 8 - HTML, CSS, JavaScript/Lab8/trivia-t3/node_modules/lilconfig/readme.md",
+    "Lesson 8 - HTML, CSS, JavaScript/Lab8/trivia-t3/node_modules/json-schema-traverse/README.md",
+    "Lesson 8 - HTML, CSS, JavaScript/Lab8/trivia-t3/node_modules/json-buffer/README.md",
+    "Lesson 8 - HTML, CSS, JavaScript/Lab8/trivia-t3/node_modules/jiti/README.md",
+    "Lesson 8 - HTML, CSS, JavaScript/Lab8/trivia-t3/node_modules/is-core-module/README.md",
+    "Lesson 8 - HTML, CSS, JavaScript/Lab8/trivia-t3/node_modules/is-core-module/CHANGELOG.md",
+    "Lesson 8 - HTML, CSS, JavaScript/Lab8/trivia-t3/node_modules/argparse/README.md",
+    "Lesson 8 - HTML, CSS, JavaScript/Lab8/trivia-t3/node_modules/argparse/CHANGELOG.md",
+    "Lesson 8 - HTML, CSS, JavaScript/Lab8/trivia-t3/node_modules/@jridgewell/trace-mapping/README.md",
+    "Lesson 8 - HTML, CSS, JavaScript/Lab8/trivia-t3/node_modules/@jridgewell/sourcemap-codec/README.md",
+    "Lesson 8 - HTML, CSS, JavaScript/Lab8/trivia-t3/node_modules/@jridgewell/gen-mapping/README.md",
+    "Lesson 8 - HTML, CSS, JavaScript/Lesson 8 Notes.md",
+    "Lesson 8 - HTML, CSS, JavaScript/Trivia game T3.md",
+    "Lesson 8 - HTML, CSS, JavaScript/Lab8/trivia-t3/node_modules/espree/README.md",
+    "Lesson 8 - HTML, CSS, JavaScript/Lab8/trivia-t3/node_modules/eslint/README.md",
+    "Lesson 8 - HTML, CSS, JavaScript/Lab8/trivia-t3/node_modules/@typescript-eslint/typescript-estree/README.md",
+    "Lesson 8 - HTML, CSS, JavaScript/Lab8/trivia-t3/node_modules/@next/eslint-plugin-next/README.md",
+    "Lesson 8 - HTML, CSS, JavaScript/Lab8/trivia-t3/node_modules/@tanstack/react-query/README.md",
+    "Lesson 8 - HTML, CSS, JavaScript/Lab8/trivia-t3/node_modules/@prisma/client/README.md",
+    "Lesson 8 - HTML, CSS, JavaScript/Lab8/trivia-t3/node_modules/styled-jsx/readme.md",
+    "Lesson 8 - HTML, CSS, JavaScript/Lab8/trivia-t3/node_modules/styled-jsx/license.md",
+    "Lesson 8 - HTML, CSS, JavaScript/Lab8/trivia-t3/node_modules/tailwindcss/lib/postcss-plugins/nesting/README.md",
+    "Lesson 8 - HTML, CSS, JavaScript/Lab8/trivia-t3/node_modules/tailwindcss/lib/value-parser/README.md",
+    "Lesson 8 - HTML, CSS, JavaScript/Lab8/trivia-t3/node_modules/postcss-selector-parser/README.md",
+    "Lesson 8 - HTML, CSS, JavaScript/Lab8/trivia-t3/node_modules/prisma/build/public/assets/tick.8cbb6a93.svg",
+    "Lesson 8 - HTML, CSS, JavaScript/Lab8/trivia-t3/node_modules/prisma/build/public/assets/tick-indeterminate.aec8a44d.svg",
+    "Lesson 8 - HTML, CSS, JavaScript/Lab8/trivia-t3/node_modules/prisma/build/public/assets/string.ea615a24.svg",
+    "Lesson 8 - HTML, CSS, JavaScript/Lab8/trivia-t3/node_modules/prisma/build/public/assets/search.2ed766ce.svg",
+    "Lesson 8 - HTML, CSS, JavaScript/Lab8/trivia-t3/node_modules/prisma/build/public/assets/refresh.d5448ccc.svg",
+    "Lesson 8 - HTML, CSS, JavaScript/Lab8/trivia-t3/node_modules/prisma/build/public/assets/settings.5ad25af2.svg",
+    "Lesson 8 - HTML, CSS, JavaScript/Lab8/trivia-t3/node_modules/prisma/build/public/assets/plus.8fbf7ad3.svg",
+    "Lesson 8 - HTML, CSS, JavaScript/Lab8/trivia-t3/node_modules/prisma/build/public/assets/logotype.a960b169.svg",
+    "Lesson 8 - HTML, CSS, JavaScript/Lab8/trivia-t3/node_modules/prisma/build/public/assets/play.8811691e.svg",
+    "Lesson 8 - HTML, CSS, JavaScript/Lab8/trivia-t3/node_modules/prisma/build/public/assets/object.0ba944a6.svg"
   ]
 }

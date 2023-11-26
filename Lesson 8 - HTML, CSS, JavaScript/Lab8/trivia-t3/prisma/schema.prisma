@@ -1,0 +1,46 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "sqlite"
+    url      = env("DATABASE_URL")
+}
+
+model Question {
+  id                String        @id @default(uuid())
+  category          String
+  difficulty        String
+  isNiche           Boolean
+  questionText      String
+  correctAnswer     String
+  type              String
+  tags              Tag[]
+  regions           Region[]
+  incorrectAnswers  IncorrectAnswer[]
+}
+
+model Tag {
+  id        String    @id @default(uuid())
+  value     String
+  question  Question  @relation(fields: [questionId], references: [id])
+  questionId String
+}
+
+model Region {
+  id        String    @id @default(uuid())
+  value     String
+  question  Question  @relation(fields: [questionId], references: [id])
+  questionId String
+}
+
+model IncorrectAnswer {
+  id        String    @id @default(uuid())
+  value     String
+  question  Question  @relation(fields: [questionId], references: [id])
+  questionId String
+}
+

@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Soehne";
+    src: url("/Fonts/SoehneFull/Sohne-Buch.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  /* Soehne - Italic */
+  @font-face {
+    font-family: "Soehne";
+    src: url("/Fonts/SoehneFull/Sohne-BuchKursiv.otf") format("opentype");
+    font-weight: normal;
+    font-style: italic;
+  }
+  
+  /* Soehne - Bold */
+  @font-face {
+    font-family: "Soehne";
+    src: url("/Fonts/SoehneFull/Sohne-Fett.otf") format("opentype");
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  /* Soehne - Bold Italic */
+  @font-face {
+    font-family: "Soehne";
+    src: url("/Fonts/SoehneFull/Sohne-FettKursiv.otf") format("opentype");
+    font-weight: bold;
+    font-style: italic;
+  }
+  
+  /* Signifier - Regular */
+  @font-face {
+    font-family: "Signifier";
+    src: url("/Fonts/TestSignifier-Regular.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  /* Soehne Mono Buch - Regular */
+  @font-face {
+    font-family: "Soehne Mono Buch";
+    src: url("/Fonts/SoehneMono/SohneMono-Buch.otf") format("opentype");
+    font-weight: 400;
+    font-style: 400;
+  }
+  
+  
+  
