@@ -107,12 +107,9 @@ class QuestionEngine {
         const childRowDiv = ImprovedElementCreator.createElement(ElementType.DIV, [
             "flex",
             "flex-row",
-            "border",
-            "border-indigo-600",
-            "rounded-md",
             "px-4",
             "py-2",
-            "gap-8",
+            "gap-4",
         ]);
         if (divId === "multipleChoice") {
             this.renderMultipleChoice(question, childRowDiv, targetDiv);
@@ -122,24 +119,35 @@ class QuestionEngine {
         }
     }
     renderMultipleChoice(question, childRowDiv, targetDiv) {
-        targetDiv.innerHTML += `<p>${question.question}</p>`;
-        childRowDiv.innerHTML += `<button class="px-4 py-2 border border-black bg-trivia-100 text-trivia-400 rounded-md">${question.correct_answer}</button>`;
+        targetDiv.innerHTML += `<h3 class="text-3xl w-1/3 text-center">${question.question}</h3>`;
+        childRowDiv.innerHTML += `<button class="px-4  py-2 border border-black bg-trivia-200 text-trivia-400 rounded-md">${question.correct_answer}</button>`;
         question.incorrect_answers.forEach((answer) => {
-            childRowDiv.innerHTML += `<button class="px-4 py-2 border border-black bg-trivia-100 text-trivia-400 rounded-md">${answer}</button>`;
+            childRowDiv.innerHTML += `<button class="px-4 py-2 border border-black bg-trivia-200 text-trivia-400 rounded-md">${answer}</button>`;
         });
         targetDiv.appendChild(childRowDiv);
     }
     renderFreeText(question, childRowDiv, targetDiv) {
-        targetDiv.innerHTML += `<p>${question.question}</p>`;
+        targetDiv.innerHTML += `<h3 class="text-3xl w-1/3 text-center">${question.question}</h3>`;
         childRowDiv.innerHTML += `<input type="text" class="border border-black rounded-md px-4 py-2" placeholder="Enter your answer here">`;
         targetDiv.appendChild(childRowDiv);
     }
+    checkAnswer(question, answer, btn) {
+        if (question.correct_answer === answer) {
+            btn.classList.toggle("bg-greed-600");
+        }
+        else {
+            btn.classList.toggle("bg-red-600");
+            setTimeout(() => {
+                btn.classList.toggle("bg-red-600");
+            }, 600);
+        }
+    }
     async start(page, number) {
         if (page === "home") {
-            const questions = await this.api.getQuestions(number ? number + 1 : 10);
+            const questions = (await this.api.getQuestions(number ? number + 1 : 10));
             if (questions.length > 1) {
                 // Render all but the last question as multiple choice
-                questions.slice(0, -1).forEach(question => {
+                questions.slice(0, -1).forEach((question) => {
                     this.renderQuestion("multipleChoice", question);
                 });
                 // Render the last question as free text
@@ -156,5 +164,5 @@ class QuestionEngine {
     }
 }
 const renderer = new QuestionEngine();
-renderer.start("home", 2);
+renderer.start("home", 1);
 //# sourceMappingURL=main.js.map
