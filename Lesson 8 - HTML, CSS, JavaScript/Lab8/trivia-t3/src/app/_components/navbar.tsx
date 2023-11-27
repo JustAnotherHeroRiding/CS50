@@ -1,9 +1,8 @@
 "use client";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
-import { buttonVariants } from "./@/components/ui/button";
+import { Button, buttonVariants } from "./@/components/ui/button";
 
 export function NavBar() {
   return (
@@ -36,11 +35,14 @@ export function NavBar() {
           Trivial
         </span>
       </Link>
-      <div className="flex flex-1 items-center justify-end">
+      <div className="flex flex-1 items-center justify-end gap-2">
+        <Button variant={"outline"}>
+          How to play
+        </Button>
         <Link
           className={`${buttonVariants({
             variant: "outline",
-          })}rounded-md gap-2 border p-1`}
+          })} gap-2`}
           href="/"
         >
           Expanded <span>Version</span>

@@ -3,6 +3,19 @@ import { createTRPCRouter, publicProcedure } from "~/server/api/trpc";
 import { type QuestionSingle } from "~/app/_components/questionCard";
 
 const url = "https://the-trivia-api.com/v2/questions";
+const getQuestionsSchema = z.object({
+  limit: z.number(),
+  categories: z.string().optional(),
+  difficulty: z.string().optional(),
+  region: z.string().optional(),
+  tags: z.string().optional(),
+  types: z.string().optional(),
+  session: z.string().optional(),
+  preview: z.string().optional(),
+  language: z.string().optional(),
+});
+
+export type getQuestionsParams = z.infer<typeof getQuestionsSchema>;
 
 export const triviaRouter = createTRPCRouter({
   /* https://the-trivia-api.com/docs/v2/
@@ -18,17 +31,7 @@ export const triviaRouter = createTRPCRouter({
 
   getQuestions: publicProcedure
     .input(
-      z.object({
-        limit: z.number(),
-        categories: z.string().optional(),
-        difficulty: z.string().optional(),
-        region: z.string().optional(),
-        tags: z.string().optional(),
-        types: z.string().optional(),
-        session: z.string().optional(),
-        preview: z.string().optional(),
-        language: z.string().optional(),
-      }),
+      getQuestionsSchema
     )
     .query(async ({ input }) => {
       // Convert all input fields to strings
