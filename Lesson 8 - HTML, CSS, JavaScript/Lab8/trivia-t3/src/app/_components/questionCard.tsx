@@ -27,6 +27,7 @@ export function QuestionCard({ question }: QuestionCardProps) {
   
     return (
       <Card className="p-4">
+        <h1>{question.question.text}</h1>
         {allAnswers.map((answer, index) => (
           <Answer key={index} text={answer.text} isCorrect={answer.isCorrect} />
         ))}

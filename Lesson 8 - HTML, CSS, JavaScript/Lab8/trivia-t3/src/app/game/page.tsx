@@ -1,6 +1,7 @@
 import { api } from "~/trpc/server";
 import { NavBar } from "../_components/navbar";
 import { QuestionCard } from "../_components/questionCard";
+import { LoadingSpinner } from "../_components/LoadingSpinner";
 
 export default async function Game() {
   const questions = await api.trivia.getQuestions.query({ limit: 2 });
@@ -10,7 +11,10 @@ export default async function Game() {
       <NavBar />
       <div className="container flex flex-grow flex-col items-center justify-center gap-12 px-4 py-16 ">
         {questions.length === 0 ? (
-          <p>No questions found</p>
+          <>
+            <LoadingSpinner />
+            <p>No questions found</p>
+          </>
         ) : (
           questions.map((question) => (
             <QuestionCard key={question.id} question={question} />
