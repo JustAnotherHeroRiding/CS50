@@ -1,4 +1,4 @@
-import { Card } from "@/components/ui/card";
+import { Card } from "./@/components/ui/card";
 import { Answer } from "./Answer";
 
 export interface QuestionSingle {
@@ -26,7 +26,7 @@ export function QuestionCard({ question }: QuestionCardProps) {
     allAnswers.sort(() => Math.random() - 0.5);
   
     return (
-      <Card>
+      <Card className="p-4">
         {allAnswers.map((answer, index) => (
           <Answer key={index} text={answer.text} isCorrect={answer.isCorrect} />
         ))}
