@@ -8,9 +8,10 @@ export default async function Page({
   searchParams,
 }: {
   params: { slug: string };
-  searchParams: { [key: string]: string | string[] | undefined };
+  searchParams: Record<string, string | string[] | undefined>;
 }) {
   //console.log(searchParams.limit); This prints 2 as passed
+  // Lets try and pass all the params instead of just the limit, it should be compatible with the object expected
   const limit = searchParams.limit ?? 2; // Default to 2 if not provided
   const questions = await api.trivia.getQuestions.query({
     limit: Number(limit),
