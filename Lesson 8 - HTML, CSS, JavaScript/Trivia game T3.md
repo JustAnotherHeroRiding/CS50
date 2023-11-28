@@ -33,3 +33,17 @@
 ### 6. **High Score and Leaderboards**
 - Implement auth with NextAuth so that users can log in
 - Link a mysql database could be another planetscale account or perhaps an alternative(do research)
+
+
+
+
+
+
+
+
+- One leetcode exercise
+- incremental dom
+- read about angular dom
+- react vs angular
+- reduce and other array methods
+- 

@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { db } from "~/server/db";
 
 import {
   createTRPCRouter,
@@ -22,16 +23,20 @@ const getQuestionsSchema = z.object({
 
 export type getQuestionsParams = z.infer<typeof getQuestionsSchema>;
 
+type QuestionForPrisma = Omit<QuestionSingle, 'question'> & {
+  questionText: string;
+};
+
+
 export const triviaRouter = createTRPCRouter({
   /* https://the-trivia-api.com/docs/v2/
   Api docs */
-  test: publicProcedure.query((ctx) => {
-    console.log(ctx);
+  test: publicProcedure.query(() => {
     return "Hello from trivia";
   }),
   getQuestions: publicProcedure
     .input(getQuestionsSchema)
-    .query(async ({ ctx, input }) => {
+    .query(async ({ input }) => {
       // Convert all input fields to strings
       const inputAsString = Object.fromEntries(
         Object.entries(input).map(([key, value]) => [key, String(value)]),
@@ -51,8 +56,14 @@ export const triviaRouter = createTRPCRouter({
         });
         const data = (await response.json()) as QuestionSingle[]; // Use await here
         // eslint-disable-next-line @typescript-eslint/no-unsafe-return
-        //ctx.db.question.createMany(data)
-        console.log(ctx);
+        // Transform data to match Prisma model
+        const transformedData : QuestionForPrisma[] = data.map((question) => ({
+          ...question, // Spread operator to copy most properties
+          questionText: question.question.text, // Override the questionText field
+          // Remove the original 'question' object as it's not needed in Prisma model
+        }));
+        // Save to database
+        //await db.question.createMany({ data: transformedData });
         return data; // Return the typed data
       } catch (err) {
         console.log(err);
