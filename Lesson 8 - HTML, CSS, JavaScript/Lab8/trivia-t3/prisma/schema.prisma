@@ -2,45 +2,28 @@
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
 generator client {
-    provider = "prisma-client-js"
+  provider        = "prisma-client-js"
+  previewFeatures = ["multiSchema"]
 }
 
 datasource db {
-    provider = "sqlite"
-    url      = env("DATABASE_URL")
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+  schemas  = ["public", "auth"]
 }
 
 model Question {
-  id                String        @id @default(uuid())
-  category          String
-  difficulty        String
-  isNiche           Boolean
-  questionText      String
-  correctAnswer     String
-  type              String
-  tags              Tag[]
-  regions           Region[]
-  incorrectAnswers  IncorrectAnswer[]
-}
+  id               String   @id @default(uuid())
+  category         String
+  difficulty       String
+  isNiche          Boolean
+  questionText     String
+  correctAnswer    String
+  type             String
+  tags             String[]
+  regions          String[]
+  incorrectAnswers String[]
 
-model Tag {
-  id        String    @id @default(uuid())
-  value     String
-  question  Question  @relation(fields: [questionId], references: [id])
-  questionId String
+  @@schema("public")
 }
-
-model Region {
-  id        String    @id @default(uuid())
-  value     String
-  question  Question  @relation(fields: [questionId], references: [id])
-  questionId String
-}
-
-model IncorrectAnswer {
-  id        String    @id @default(uuid())
-  value     String
-  question  Question  @relation(fields: [questionId], references: [id])
-  questionId String
-}
-
