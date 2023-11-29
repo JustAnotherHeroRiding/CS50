@@ -46,4 +46,3 @@
 - read about angular dom
 - react vs angular
 - reduce and other array methods
-- 
